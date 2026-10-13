@@ -1,0 +1,48 @@
+source_id,group,url,dest,expected_sha256,license_class,terms_id,note
+kanko_agg_visitors,kanko,https://www.pref.nagasaki.jp/fs/4/1/5/5/5/_/_______21_-_.xlsx,raw/pref/kanko/aggregate_visitors_H21-.xlsx,8afba3632d5ca501449afb6cc11ab797fea3eb979118c34ee2576de9d8605f7a,restricted_pref,T_PREF_SITE,県観光統計 集約表(観光客数 平成21年-)
+kanko_honbun_2025,kanko_notes,https://www.pref.nagasaki.jp/fs/4/1/5/5/0/_/__7____________.pdf,raw/pref/kanko/honbun_2025.pdf,0a4bfc9209fd17ac8ad23337a6d603204ee95357936278c3cd5c52ff9bf44220,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2024,kanko_notes,https://www.pref.nagasaki.jp/uploads/2025/09/1757984221.pdf,raw/pref/kanko/honbun_2024.pdf,c58a52a79f5a7dcb79b3ffa84a015bfb1792f37b589e8be99ba4f40c16e1d054,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2023,kanko_notes,https://www.pref.nagasaki.jp/uploads/2024/09/1725421464.pdf,raw/pref/kanko/honbun_2023.pdf,75a2f703e8abfb1dbbf1e5ecc3f753a373777176f049170dcdc846417407a8a0,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2022,kanko_notes,https://www.pref.nagasaki.jp/uploads/2023/09/1695621587.pdf,raw/pref/kanko/honbun_2022.pdf,7ac684448ee2df4063f59b00ae072e313a2428b6b16853316ce5782a15a087b0,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2021,kanko_notes,https://www.pref.nagasaki.jp/uploads/2022/09/1664172165.pdf,raw/pref/kanko/honbun_2021.pdf,d8ee416714d69b7989f24063b17f23681bd609fb14e9e312ef74f3e0b313859d,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2020,kanko_notes,https://www.pref.nagasaki.jp/uploads/2021/09/1632294575.pdf,raw/pref/kanko/honbun_2020.pdf,cbc71a4d11fc0a88ccf15e357b406daca4915d81fc5cab6098ea9a2e104d4ff7,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2019,kanko_notes,https://www.pref.nagasaki.jp/uploads/2020/09/1600403395.pdf,raw/pref/kanko/honbun_2019.pdf,f9603bacfcdf5cfe3fa190466812c200c7161747c0b9d9ba281fc9f850aca4cb,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2018,kanko_notes,https://www.pref.nagasaki.jp/uploads/2019/06/1561464780.pdf,raw/pref/kanko/honbun_2018.pdf,d028b3a8602e6a36aaa62a067bd004bc02ed49284f043c5e7f1dca1f65d0a343,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2017,kanko_notes,https://www.pref.nagasaki.jp/uploads/2018/06/1533729786.pdf,raw/pref/kanko/honbun_2017.pdf,9bb9e78488eb5e6c2e577e060ecb40e186c84cdcffc8b2e834a2cf76d1bcff71,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2016,kanko_notes,https://www.pref.nagasaki.jp/uploads/2017/06/1498648082.pdf,raw/pref/kanko/honbun_2016.pdf,bcef704a9856b4c28680306f3f5e0aba44bd569b5dd322c04eb202cb51b61d49,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+kanko_honbun_2015,kanko_notes,https://www.pref.nagasaki.jp/uploads/2017/06/1498204798.pdf,raw/pref/kanko/honbun_2015.pdf,64be0b4800348cae7e3c2cd68bc7467d981eabf137beab28760cfc1ee5d8151a,restricted_pref,T_PREF_SITE,県観光統計 本文(再算定の注記の確認用)
+jinko_nenkan_2025,jinko,https://www.pref.nagasaki.jp/fs/5/6/9/2/_/__7_.xlsx,raw/pref/jinko/nenkan_2025.xlsx,e1accff1626b1450cdf10445b862d474964f4e3ea5a5156d0b4ac270f8c11247,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2024,jinko,https://www.pref.nagasaki.jp/uploads/2025/05/1747360456.xlsx,raw/pref/jinko/nenkan_2024.xlsx,0d6e48512a069b15483aa0b0e8b842b598ed40a24bb723bc269864b4528907cc,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2023,jinko,https://www.pref.nagasaki.jp/uploads/2024/04/1713940239.xlsx,raw/pref/jinko/nenkan_2023.xlsx,640c742024485b826856bf3c52cddb0cba018b3236e11b0bae8e100938810352,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2022,jinko,https://www.pref.nagasaki.jp/uploads/2024/04/1713934805.xlsx,raw/pref/jinko/nenkan_2022.xlsx,37471bbe7602297899dbec0c744d1f8d260da0a6ef2db9072172c5e02cc9cd30,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2021,jinko,https://www.pref.nagasaki.jp/uploads/2022/03/1648540298.xls,raw/pref/jinko/nenkan_2021.xls,0fba16fd0ff2cf1cd5a9fbadfed30e596d6b93c960f340cb0f7c640068eed150,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2020,jinko,https://www.pref.nagasaki.jp/uploads/2021/12/1639446379.xls,raw/pref/jinko/nenkan_2020.xls,999e8a0b5223c77791e5a2c939db1599fc45c1e3d6585d26b4c0db5b97a66958,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2019,jinko,https://www.pref.nagasaki.jp/uploads/2020/04/1588049587.xls,raw/pref/jinko/nenkan_2019.xls,fabd29d4be6caecc9339b0fca5dea275092d1cfcba6b1fb407d8cd40b2a9b9ad,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2018,jinko,https://www.pref.nagasaki.jp/uploads/2019/03/1553475453.xls,raw/pref/jinko/nenkan_2018.xls,6305e56ecb7d18ece21bcd9224eac99e494b447de36ad7d11bc0a79ff62f36fd,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2017,jinko,https://www.pref.nagasaki.jp/uploads/2018/09/1537269353.xls,raw/pref/jinko/nenkan_2017.xls,debeb1846f57c0911e9d2fd5f54526f44012bd038ffb957fcfbc15487cb633ee,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2016,jinko,https://www.pref.nagasaki.jp/uploads/2018/03/1520309971.xls,raw/pref/jinko/nenkan_2016.xls,6066c90e539e8703e7cef8e96d1fb76fcf5beb388e50991f28a81c1a96e8bba4,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+jinko_nenkan_2015,jinko,https://www.pref.nagasaki.jp/uploads/2016/11/1479085936.xls,raw/pref/jinko/nenkan_2015.xls,916d8170e1f7e87ed32849c8042ca03f81fec625f3810b4ce7dfc124ded0c14e,restricted_pref,T_PREF_SITE,県異動人口調査 年間集計
+boundary_koku2020_42,boundary,https://www.e-stat.go.jp/gis/statmap-search/data?dlserveyId=A002005212020&code=42&coordSys=1&format=shape&downloadType=5&datum=2000,raw/public/estat_gis/A002005212020DDSWC42.zip,,gov_std,T_ESTAT_GIS,統計GIS 境界データ 令和2年国勢調査 小地域 長崎県 世界測地系 緯度経度 shape
+jma_station_table,weather,https://www.jma.go.jp/bosai/amedas/const/amedastable.json,raw/public/jma/amedastable.json,,jma,T_JMA,観測点の緯度経度(アメダス地点表)
+terms_estat,terms,https://www.e-stat.go.jp/terms-of-use,raw/terms/estat_terms_of_use.html,,terms,,e-Stat 利用規約
+terms_estat_gis,terms,https://www.e-stat.go.jp/gis-terms,raw/terms/estat_gis_terms.html,,terms,,統計地理情報システム機能利用規約
+terms_jma,terms,https://www.jma.go.jp/jma/kishou/info/coment.html,raw/terms/jma_terms.html,,terms,,気象庁ホームページ利用規約
+terms_pref_site,terms,https://www.pref.nagasaki.jp/pages/site_info.html,raw/terms/pref_site_info.html,,terms,,長崎県公式ウェブサイト このサイトについて
+terms_public_data_v1,terms,https://www.digital.go.jp/resources/open_data/public_data_license_v1.0,raw/terms/public_data_license_v1.0.html,,terms,,公共データ利用規約(第1.0版)。気象庁の利用規約が準拠する規約
+ref_jma_obsdl_help1,reference,https://www.data.jma.go.jp/risk/obsdl/top/help1.html,raw/reference/jma_obsdl_help1.html,,reference,,気象庁 過去の気象データ・ダウンロード 使い方(段2の設計用)
+ref_jma_hourly_sample_47817_20200101,reference,https://www.data.jma.go.jp/stats/etrn/view/hourly_s1.php?prec_no=84&block_no=47817&year=2020&month=1&day=1&view=,raw/reference/jma_hourly_47817_20200101.html,,reference,,時別値(官署)の1日分。容量・行数の実測用
+ref_keneibus_opendata,reference,https://www.keneibus.jp/local/OpenData,raw/reference/keneibus_opendata.html,,reference,,長崎県営バス 公開データ(GTFS準拠)ページ
+ref_jma_obsdl_help3,reference,https://www.data.jma.go.jp/risk/obsdl/top/help3.html,raw/reference/jma_obsdl_help3.html,,reference,,ダウンロードファイルの形式(段2の設計用)
+ref_jma_obsdl_help4,reference,https://www.data.jma.go.jp/risk/obsdl/top/help4.html,raw/reference/jma_obsdl_help4.html,,reference,,データの表記と意味(準正常値・資料不足値。段2の設計用)
+ref_keneibus_gtfs_20261001,reference,https://www.keneibus.jp/fs/2/4/5/6/6/_/GTFS_20261001.zip,raw/reference/keneibus_GTFS_20261001.zip,,cc_by_4,,長崎県営バス GTFS(CC BY 4.0の表示。件数の実測用)
+ref_ssds_top,reference,https://www.stat.go.jp/data/ssds/index.html,raw/reference/ssds_top.html,,reference,,社会・人口統計体系(統計局)トップ。全国パネル設計用
+ref_ssds_estat,reference,https://www.e-stat.go.jp/regional-statistics/ssdsview,raw/reference/ssds_estat.html,,reference,,社会・人口統計体系(e-Stat)
+ref_idou_top,reference,https://www.stat.go.jp/data/idou/index.html,raw/reference/idou_top.html,,reference,,住民基本台帳人口移動報告(統計局)トップ
+ref_mergers,reference,https://www.e-stat.go.jp/municipalities/cities/mergersearch,raw/reference/estat_mergersearch.html,,reference,,市区町村コード・廃置分合等情報(e-Stat)
+ref_ssdse,reference,https://www.nstac.go.jp/SSDSE/,raw/reference/nstac_ssdse.html,,reference,,教育用標準データセット SSDSE(統計センター)
+ref_idou_2025_city,reference,https://www.stat.go.jp/data/idou/2025np/jissu/youyaku/index.html,raw/reference/idou_2025_city.html,,reference,,住民基本台帳人口移動報告 2025年結果(市区町村別)
+ref_idou_gaiyou,reference,https://www.stat.go.jp/data/idou/index2.html,raw/reference/idou_gaiyou.html,,reference,,住民基本台帳人口移動報告 統計の概要
+ref_ssds_gaiyou,reference,https://www.stat.go.jp/data/ssds/1.html,raw/reference/ssds_gaiyou.html,,reference,,社会・人口統計体系 統計の概要・集計結果
+ref_ssds_items,reference,https://www.stat.go.jp/data/ssds/2.html,raw/reference/ssds_items.html,,reference,,社会・人口統計体系 基礎データ項目一覧・掲載年次一覧
+ref_ssds_kiso_shi_xlsx,reference,https://www.stat.go.jp/data/ssds/zuhyou/kiso_shi.xlsx,raw/reference/ssds_kiso_shi.xlsx,,reference,,社会・人口統計体系 市区町村 基礎データ項目一覧・掲載年次一覧(239KB)
+ref_stat_riyou,reference,https://www.stat.go.jp/info/riyou.html,raw/reference/stat_riyou.html,,reference,,統計局ホームページ サイトの利用について

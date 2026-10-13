@@ -1,0 +1,77 @@
+NOTICE
+======
+
+This project's source code is licensed under the MIT License (see LICENSE; draft).
+The data handled by this project come from the providers below. Attribution and conditions of use follow.
+The quoted conditions were checked verbatim against the pages fetched on the dates recorded in
+ledger/terms_quotes_verified.csv. The interpretation in README.md is not legal advice.
+
+1. 境界データ・国勢調査の人口(統計GIS)
+-----------------------
+提供元: 総務省統計局 政府統計の総合窓口(e-Stat)統計地理情報システム
+URL: https://www.e-stat.go.jp/gis
+利用しているデータ: 令和2年国勢調査 小地域の境界データ(長崎県、世界測地系・緯度経度)。市町に集約し、描画用に簡略化したものと、小地域の人口の市町別合計を data/public に含む。
+本リポジトリへの収録: 加工物のみ(原本のZIPは含まない)
+出典表記: 出典: 政府統計の総合窓口(e-Stat)(https://www.e-stat.go.jp/) 統計GIS 境界データ(令和2年国勢調査)を加工して作成
+利用条件(原文の引用):
+  - 「コンテンツを利用する際は出典を記載してください。」 [T_ESTAT / 出典 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。」 [T_ESTAT / 編集・加工 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「編集・加工した情報を、あたかも国（又は府省等）が作成したかのような態様で公表・利用してはいけません。」 [T_ESTAT / 国が作成したような公表の禁止 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「本利用ルールが適用されるコンテンツはCC BYに従うことでも利用することができます。」 [T_ESTAT / CC BYとの関係 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「外部データベース等とのＡＰＩ（Application Programming Interface）連携等により取得しているコンテンツについては、その提供元の利用条件に従ってください。」 [T_ESTAT / API連携 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「コンテンツの中には、第三者（国以外の者をいいます。以下同じ。）が著作権その他の権利を有している場合があります。」 [T_ESTAT / 第三者の権利 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「コンテンツは、予告なく変更、移転、削除等が行われることがあります。」 [T_ESTAT / 変更・削除 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「統計地理情報システムの利用について」 [T_ESTAT / 別の利用ルール(統計地理情報システム) / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「の利用条件等は、「政府統計の総合窓口（e-Stat）利用規約」に準じるものとします。」 [T_ESTAT_GIS / コンテンツの利用条件(第6条) / https://www.e-stat.go.jp/gis-terms / 取得 2026-10-13T04:07:54Z]
+  - 「統計センターは、本機能の負荷状況に応じてアクセス制限をかけることがあります。」 [T_ESTAT_GIS / アクセス制限(第5条) / https://www.e-stat.go.jp/gis-terms / 取得 2026-10-13T04:07:54Z]
+  - 「国及び統計センターは、本機能から提供するコンテンツの完全性・正確性・有用性・安全性等について利用者に対し一切の保証をしません。」 [T_ESTAT_GIS / 免責(第9条) / https://www.e-stat.go.jp/gis-terms / 取得 2026-10-13T04:07:54Z]
+  - 「複製、公衆送信、翻訳・変形等の翻案等、自由に利用できます。商用利用も可能です。」 [T_ESTAT / 商用利用 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「数値データ、簡単な表・グラフ等は著作権の対象ではありません」 [T_ESTAT / 数値データ / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+
+2. 気象データ(気象庁)
+-------------
+提供元: 気象庁
+URL: https://www.data.jma.go.jp/stats/etrn/
+利用しているデータ: 過去の気象データ(官署6地点、月ごとの値、2015〜2025年)と、アメダス地点表の位置情報。月別の表と年の集計を data/public に含む。
+本リポジトリへの収録: 加工物のみ(取得したHTMLの原本は含まない)
+出典表記: 出典: 気象庁ホームページ「過去の気象データ」(https://www.data.jma.go.jp/stats/etrn/)を加工して作成
+利用条件(原文の引用):
+  - 「コンテンツを利用する際は出典を記載してください。」 [T_JMA / 出典 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。」 [T_JMA / 編集・加工 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「あたかも国（又は府省等）が作成したかのような態様で公表・利用してはいけません。」 [T_JMA / 国が作成したような公表の禁止 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「権利表記の記載がない限り「公共データ利用規約（第1.0版）」に準拠した利用条件の下で、利用することができます。」 [T_JMA / 利用の根拠 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「一部のコンテンツには、個別法令により利用に制約がある場合があります。」 [T_JMA / 個別法令の制約 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「商用利用も可能です。」 [T_PDL1 / 商用利用 / https://www.digital.go.jp/resources/open_data/public_data_license_v1.0 / 取得 2026-10-13T04:13:52Z]
+  - 「本コンテンツを利用する際は出典を記載してください。」 [T_PDL1 / 出典 / https://www.digital.go.jp/resources/open_data/public_data_license_v1.0 / 取得 2026-10-13T04:13:52Z]
+  - 「本コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったこと及びその主体を記載してください。」 [T_PDL1 / 編集・加工 / https://www.digital.go.jp/resources/open_data/public_data_license_v1.0 / 取得 2026-10-13T04:13:52Z]
+  - 「統計を行う対象資料が許容範囲で欠けている（準正常値）」 [T_JMA_HELP / 準正常値の意味 / https://www.data.jma.go.jp/risk/obsdl/top/help4.html / 取得 2026-10-13T04:45:38Z]
+  - 「必要な資料数は、要素または現象、統計方法により若干異なるが全体数の80％が基準」 [T_JMA_HELP / 準正常値の基準 / https://www.data.jma.go.jp/risk/obsdl/top/help4.html / 取得 2026-10-13T04:45:38Z]
+  - 「統計を行う対象資料が許容範囲を超えて欠けている（資料不足値）」 [T_JMA_HELP / 資料不足値の意味 / https://www.data.jma.go.jp/risk/obsdl/top/help4.html / 取得 2026-10-13T04:45:38Z]
+  - 「統計値がない（欠測）」 [T_JMA_HELP / 欠測 / https://www.data.jma.go.jp/risk/obsdl/top/help4.html / 取得 2026-10-13T04:45:38Z]
+  - 「「資料不足値」を不用意に利用してしまわないよう、そのようなデータを表示（格納）させない設定も可能です。」 [T_JMA_HELP / 資料不足値の扱い(設定) / https://www.data.jma.go.jp/risk/obsdl/top/help1.html / 取得 2026-10-13T04:45:23Z]
+
+3. バス情報(長崎県営バス GTFS)
+--------------------
+提供元: 長崎県営バス(長崎県交通局)
+URL: https://www.keneibus.jp/local/OpenData
+利用しているデータ: 2026年10月1日版のGTFSの件数(停留所・便・時刻)の実測にのみ使用(docs/段2_月次予測_設計.md)。データそのものは含まない。
+本リポジトリへの収録: 含まない(件数の実測値のみを文書に記載)
+出典表記: 出典: 長崎県営バス「公開データ(GTFS準拠)」(https://www.keneibus.jp/local/OpenData)、CC BY 4.0
+利用条件(原文の引用):
+  - 「クリエイティブ・コモンズ表示４．０国際ライセンスの下に提供されています」 [T_KENEIBUS / ライセンス / https://www.keneibus.jp/local/OpenData / 取得 2026-10-13T04:45:24Z]
+
+4. 長崎県の統計(観光統計・異動人口調査)— 含めていない
+------------------------------
+提供元: 長崎県
+URL: https://www.pref.nagasaki.jp/pages/site_info.html
+利用しているデータ: 長崎県観光統計(集約表・本文)、異動人口調査(年間集計)。取得スクリプト、取得元URL、SHA256、再算定の注記の要約のみを含む。
+本リポジトリへの収録: 含まない。県サイトの著作権の条項(下記)により、県への確認が済むまで公開しない
+出典表記: (データを含めないため該当なし。要約の出典: 長崎県「長崎県観光統計」(各年版))
+利用条件(原文の引用):
+  - 「当県サイトに掲載されている文字、写真、イラストなどの個々の情報に関する著作権は、原則として長崎県に帰属します。」 [T_PREF_SITE / 著作権の帰属 / https://www.pref.nagasaki.jp/pages/site_info.html / 取得 2026-10-13T04:07:54Z]
+  - 「「私的使用のための複製」や「引用」など著作権法上認められた場合を除き、無断で転載、複製、改変、放送、送信、翻訳、販売、貸与などの利用をすることはできません。」 [T_PREF_SITE / 転載・改変の制限 / https://www.pref.nagasaki.jp/pages/site_info.html / 取得 2026-10-13T04:07:54Z]
+  - 「当県サイトの情報やURLは予告なく変更又は中止されることがあります。」 [T_PREF_SITE / 免責(URL変更) / https://www.pref.nagasaki.jp/pages/site_info.html / 取得 2026-10-13T04:07:54Z]
+
+Not included in this repository / 本リポジトリに含まれないもの
+-------------------------------------------------------------
+長崎県の統計の原本・蓄積データ・加工値の地図(data/restricted, outputs/restricted)は、.gitignore で除外している。

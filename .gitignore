@@ -1,0 +1,18 @@
+# 取得した原本(県の統計・本文PDFを含む)。取得スクリプトと manifest/fetch_log.csv(URL・SHA256)で再現する
+raw/
+# 県統計由来の加工物(蓄積データ・地図)。県への確認が済むまで公開しない
+data/restricted/
+outputs/restricted/
+# 県統計から導いた数値列を含む台帳・非公開のハッシュ
+ledger/restricted/
+# 個人の作業メモ(リモートの設定コマンドなど)
+local/
+manifest/restricted/
+# 作業用(PDFのテキスト、DuckDBファイル、ライブラリ)
+work/
+warehouse/
+.pylibs/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

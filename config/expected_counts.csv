@@ -1,0 +1,7 @@
+id,expected,note
+bronze_kanko_aggregate,374,"17年(2009〜2025)×22区分(21市町+県計)。集約表の列数による(初回の取得時に実測)"
+bronze_jinko_nenkan,242,"11年(2015〜2025)×22区分"
+bronze_jma_monthly,3960,"6観測点×11年×12か月×5変数"
+bronze_boundary_small_area,4231,"令和2年国勢調査 小地域(長崎県)のポリゴン数。初回の取得時に実測"
+gold_municipality_year,231,"11年×21市町"
+gold_station_year,66,"6観測点×11年"

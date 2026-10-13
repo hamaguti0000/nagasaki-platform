@@ -1,0 +1,40 @@
+terms_id,topic,quote,verbatim_in_page,page_url,page_sha256,fetched_at_utc
+T_ESTAT,出典,コンテンツを利用する際は出典を記載してください。,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT,編集・加工,コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT,国が作成したような公表の禁止,編集・加工した情報を、あたかも国（又は府省等）が作成したかのような態様で公表・利用してはいけません。,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT,CC BYとの関係,本利用ルールが適用されるコンテンツはCC BYに従うことでも利用することができます。,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT,API連携,外部データベース等とのＡＰＩ（Application Programming Interface）連携等により取得しているコンテンツについては、その提供元の利用条件に従ってください。,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT,第三者の権利,コンテンツの中には、第三者（国以外の者をいいます。以下同じ。）が著作権その他の権利を有している場合があります。,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT,変更・削除,コンテンツは、予告なく変更、移転、削除等が行われることがあります。,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT,別の利用ルール(統計地理情報システム),統計地理情報システムの利用について,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT_GIS,コンテンツの利用条件(第6条),の利用条件等は、「政府統計の総合窓口（e-Stat）利用規約」に準じるものとします。,Y,https://www.e-stat.go.jp/gis-terms,b279e482e7b2767c1d05b574b74703f65913c8d660be2475693e38e0fdc8aed0,2026-10-13T04:07:54Z
+T_ESTAT_GIS,アクセス制限(第5条),統計センターは、本機能の負荷状況に応じてアクセス制限をかけることがあります。,Y,https://www.e-stat.go.jp/gis-terms,b279e482e7b2767c1d05b574b74703f65913c8d660be2475693e38e0fdc8aed0,2026-10-13T04:07:54Z
+T_ESTAT_GIS,免責(第9条),国及び統計センターは、本機能から提供するコンテンツの完全性・正確性・有用性・安全性等について利用者に対し一切の保証をしません。,Y,https://www.e-stat.go.jp/gis-terms,b279e482e7b2767c1d05b574b74703f65913c8d660be2475693e38e0fdc8aed0,2026-10-13T04:07:54Z
+T_JMA,出典,コンテンツを利用する際は出典を記載してください。,Y,https://www.jma.go.jp/jma/kishou/info/coment.html,ff2b45042e6207053d8f6aa617656aa6a144e462db138f0b8138de6eefbeff48,2026-10-13T04:07:54Z
+T_JMA,編集・加工,コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。,Y,https://www.jma.go.jp/jma/kishou/info/coment.html,ff2b45042e6207053d8f6aa617656aa6a144e462db138f0b8138de6eefbeff48,2026-10-13T04:07:54Z
+T_JMA,国が作成したような公表の禁止,あたかも国（又は府省等）が作成したかのような態様で公表・利用してはいけません。,Y,https://www.jma.go.jp/jma/kishou/info/coment.html,ff2b45042e6207053d8f6aa617656aa6a144e462db138f0b8138de6eefbeff48,2026-10-13T04:07:54Z
+T_JMA,利用の根拠,権利表記の記載がない限り「公共データ利用規約（第1.0版）」に準拠した利用条件の下で、利用することができます。,Y,https://www.jma.go.jp/jma/kishou/info/coment.html,ff2b45042e6207053d8f6aa617656aa6a144e462db138f0b8138de6eefbeff48,2026-10-13T04:07:54Z
+T_JMA,個別法令の制約,一部のコンテンツには、個別法令により利用に制約がある場合があります。,Y,https://www.jma.go.jp/jma/kishou/info/coment.html,ff2b45042e6207053d8f6aa617656aa6a144e462db138f0b8138de6eefbeff48,2026-10-13T04:07:54Z
+T_PREF_SITE,著作権の帰属,当県サイトに掲載されている文字、写真、イラストなどの個々の情報に関する著作権は、原則として長崎県に帰属します。,Y,https://www.pref.nagasaki.jp/pages/site_info.html,ef3b96854d2a84887f2a72667743552d7dec2a418d8db057936eefd59c82c36c,2026-10-13T04:07:54Z
+T_PREF_SITE,転載・改変の制限,「私的使用のための複製」や「引用」など著作権法上認められた場合を除き、無断で転載、複製、改変、放送、送信、翻訳、販売、貸与などの利用をすることはできません。,Y,https://www.pref.nagasaki.jp/pages/site_info.html,ef3b96854d2a84887f2a72667743552d7dec2a418d8db057936eefd59c82c36c,2026-10-13T04:07:54Z
+T_PREF_SITE,免責(URL変更),当県サイトの情報やURLは予告なく変更又は中止されることがあります。,Y,https://www.pref.nagasaki.jp/pages/site_info.html,ef3b96854d2a84887f2a72667743552d7dec2a418d8db057936eefd59c82c36c,2026-10-13T04:07:54Z
+T_ESTAT,商用利用,複製、公衆送信、翻訳・変形等の翻案等、自由に利用できます。商用利用も可能です。,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_ESTAT,数値データ,数値データ、簡単な表・グラフ等は著作権の対象ではありません,Y,https://www.e-stat.go.jp/terms-of-use,b20b14e1740943d1269c3b09e230468ae738dfc058a311c44212eb6828fe799a,2026-10-13T04:07:52Z
+T_PDL1,商用利用,商用利用も可能です。,Y,https://www.digital.go.jp/resources/open_data/public_data_license_v1.0,00e83bc5672f3dadcb20ae40e63101bb74f9334b840044a6a25054fd0572d6f9,2026-10-13T04:13:52Z
+T_PDL1,出典,本コンテンツを利用する際は出典を記載してください。,Y,https://www.digital.go.jp/resources/open_data/public_data_license_v1.0,00e83bc5672f3dadcb20ae40e63101bb74f9334b840044a6a25054fd0572d6f9,2026-10-13T04:13:52Z
+T_PDL1,編集・加工,本コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったこと及びその主体を記載してください。,Y,https://www.digital.go.jp/resources/open_data/public_data_license_v1.0,00e83bc5672f3dadcb20ae40e63101bb74f9334b840044a6a25054fd0572d6f9,2026-10-13T04:13:52Z
+T_KENEIBUS,ライセンス,クリエイティブ・コモンズ表示４．０国際ライセンスの下に提供されています,Y,https://www.keneibus.jp/local/OpenData,dbebcf05703f6dd83c621c4d8087027e7a6ca31350de9edab5e797210080721d,2026-10-13T04:45:24Z
+T_JMA_HELP,準正常値の意味,統計を行う対象資料が許容範囲で欠けている（準正常値）,Y,https://www.data.jma.go.jp/risk/obsdl/top/help4.html,82971c6339b3767a596791f8afe0b5aa5be29e25686f4c56c2dfe864b5356d6d,2026-10-13T04:45:38Z
+T_JMA_HELP,準正常値の基準,必要な資料数は、要素または現象、統計方法により若干異なるが全体数の80％が基準,Y,https://www.data.jma.go.jp/risk/obsdl/top/help4.html,82971c6339b3767a596791f8afe0b5aa5be29e25686f4c56c2dfe864b5356d6d,2026-10-13T04:45:38Z
+T_JMA_HELP,資料不足値の意味,統計を行う対象資料が許容範囲を超えて欠けている（資料不足値）,Y,https://www.data.jma.go.jp/risk/obsdl/top/help4.html,82971c6339b3767a596791f8afe0b5aa5be29e25686f4c56c2dfe864b5356d6d,2026-10-13T04:45:38Z
+T_JMA_HELP,欠測,統計値がない（欠測）,Y,https://www.data.jma.go.jp/risk/obsdl/top/help4.html,82971c6339b3767a596791f8afe0b5aa5be29e25686f4c56c2dfe864b5356d6d,2026-10-13T04:45:38Z
+T_JMA_HELP,資料不足値の扱い(設定),「資料不足値」を不用意に利用してしまわないよう、そのようなデータを表示（格納）させない設定も可能です。,Y,https://www.data.jma.go.jp/risk/obsdl/top/help1.html,168bea95709398b290aaabc0468019cbd551d5f4eb284004eab3cb7aad939538,2026-10-13T04:45:23Z
+T_STAT,商用利用(統計局),商用利用も可能です。,Y,https://www.stat.go.jp/info/riyou.html,33cefb293dd17ecc822b9fa1a0623b2041076f7e07c52bd2f58c3cd6b119b3a3,2026-10-13T05:08:06Z
+T_STAT,数値データ(統計局),数値データ、簡単な表・グラフ等は著作権の対象ではありません,Y,https://www.stat.go.jp/info/riyou.html,33cefb293dd17ecc822b9fa1a0623b2041076f7e07c52bd2f58c3cd6b119b3a3,2026-10-13T05:08:06Z
+T_STAT,出典(統計局),コンテンツを利用する際は出典を記載してください。,Y,https://www.stat.go.jp/info/riyou.html,33cefb293dd17ecc822b9fa1a0623b2041076f7e07c52bd2f58c3cd6b119b3a3,2026-10-13T05:08:06Z
+T_STAT,準拠する規約(統計局),「公共データ利用規約（第1.0版）」（PDL1.0）,Y,https://www.stat.go.jp/info/riyou.html,33cefb293dd17ecc822b9fa1a0623b2041076f7e07c52bd2f58c3cd6b119b3a3,2026-10-13T05:08:06Z
+T_IDOU,出典の表記(住民基本台帳人口移動報告),統計データを引用・転載する場合には、出典：「住民基本台帳人口移動報告」（総務省統計局）の表記をお願いします。,Y,https://www.stat.go.jp/data/idou/index.html,4647519c19a25fe12ab616dcf456f62b069f26c425b46df28cb8b30ca1a25f2a,2026-10-13T05:06:40Z
+T_SSDS,更新時期(社会・人口統計体系),市区町村データは毎年度おおむね6月です。,Y,https://www.stat.go.jp/data/ssds/2.html,f0f1ef75e535928de851bb25d6406cfd53f576970a601936b3733846fd352e8d,2026-10-13T05:07:14Z
+T_SSDS,項目数(市区町村),市区町村別に約650項目の基礎データを収集しています。,Y,https://www.stat.go.jp/data/ssds/2.html,f0f1ef75e535928de851bb25d6406cfd53f576970a601936b3733846fd352e8d,2026-10-13T05:07:14Z
+T_SSDS,e-Statでの提供,社会・人口統計体系の全ての結果は,Y,https://www.stat.go.jp/data/ssds/1.html,c38f7fce122b963362ac42850fbe95650bfb68cc96722a6e24647532c1fee983,2026-10-13T05:07:12Z
+T_SSDSE,市区町村数と項目数(SSDSE-A),1741市区町村 ×多分野125項目,Y,https://www.nstac.go.jp/SSDSE/,58a92c30332015c57762fd55ac261650c6f0df83cd995d257e3eed88e34a7fa0,2026-10-13T05:06:41Z

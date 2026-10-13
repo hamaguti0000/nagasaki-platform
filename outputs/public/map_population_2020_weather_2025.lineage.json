@@ -1,0 +1,203 @@
+{
+  "font": {
+    "file": "NotoSansJP-Regular.ttf",
+    "name": "Noto Sans CJK JP",
+    "sha256": "68a3fc98800b2a27b371f2fb79991daf3633bd89309d4ffaa6946fd587f375b5"
+  },
+  "gold_and_silver_tables": [
+    "gold_municipality_pop2020",
+    "silver_station",
+    "gold_station_year",
+    "bronze_boundary_small_area",
+    "bronze_jma_monthly"
+  ],
+  "libraries": {
+    "duckdb": "1.5.6",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "python": "3.12.3"
+  },
+  "metric": "sum(JINKO) by city (令和2年国勢調査)",
+  "note": "公開区分: public(国・気象庁のデータのみ。出典・加工の注記つき)",
+  "sources": [
+    {
+      "fetched_at_utc": "2026-10-13T04:07:50Z",
+      "license_class": "gov_std",
+      "sha256": "2884d6a5212027d78044994e1fddf353a2cc4a9e1f9a3a9bce51a999bff5c902",
+      "source_id": "boundary_koku2020_42",
+      "terms_id": "T_ESTAT_GIS",
+      "url": "https://www.e-stat.go.jp/gis/statmap-search/data?dlserveyId=A002005212020&code=42&coordSys=1&format=shape&downloadType=5&datum=2000"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:08:41Z",
+      "license_class": "jma",
+      "sha256": "cad882b98382884aed72adcd3af925a15db090b3af5edff5437312c22b168135",
+      "source_id": "jma_47800_2025_a1",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47800&year=2025&month=&day=&view=a1"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:08:43Z",
+      "license_class": "jma",
+      "sha256": "7b2b971609c599a5034cb1295b430f5cc94926de768a74399afad025ca2ea800",
+      "source_id": "jma_47800_2025_a2",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47800&year=2025&month=&day=&view=a2"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:08:44Z",
+      "license_class": "jma",
+      "sha256": "751aa55694e4efb659aded16e00d24250f52e5be9f151a48c1ca35a5e7acc3c9",
+      "source_id": "jma_47800_2025_a4",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47800&year=2025&month=&day=&view=a4"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:09:33Z",
+      "license_class": "jma",
+      "sha256": "6c9beb753fb510507971b8b8fcf4f4e16f617a90cdd6b890275d979c820392ae",
+      "source_id": "jma_47805_2025_a1",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47805&year=2025&month=&day=&view=a1"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:09:34Z",
+      "license_class": "jma",
+      "sha256": "7891833fcb61da5e92d67615501923a68c1ef8e2ace57ea21971c46db9c6110a",
+      "source_id": "jma_47805_2025_a2",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47805&year=2025&month=&day=&view=a2"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:09:36Z",
+      "license_class": "jma",
+      "sha256": "2642bc8a5a24057fbf4a9d46568c07977724e5c3247de291c94d81c235e05850",
+      "source_id": "jma_47805_2025_a4",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47805&year=2025&month=&day=&view=a4"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:10:24Z",
+      "license_class": "jma",
+      "sha256": "5e60bc9443373e90c91c8df59221258dd0f1ce0bc7b8583365ca0e8ac27909db",
+      "source_id": "jma_47812_2025_a1",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47812&year=2025&month=&day=&view=a1"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:10:26Z",
+      "license_class": "jma",
+      "sha256": "cdca4c09a375e5333aab104970ce92afd1cada1bce243e16b42e79564896250d",
+      "source_id": "jma_47812_2025_a2",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47812&year=2025&month=&day=&view=a2"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:10:27Z",
+      "license_class": "jma",
+      "sha256": "47145101ddaffed491fb2594e61c3049c6c5ae34a46cdba5a7d6ba8382a50d41",
+      "source_id": "jma_47812_2025_a4",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47812&year=2025&month=&day=&view=a4"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:11:15Z",
+      "license_class": "jma",
+      "sha256": "5a1708b4218a4620a2097d752f69d6857de51b643e855888ceef10d111488c17",
+      "source_id": "jma_47817_2025_a1",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47817&year=2025&month=&day=&view=a1"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:11:17Z",
+      "license_class": "jma",
+      "sha256": "25d082d913acc3e075a8a5ee9189fa6ce8a62ec28d91b4b2a332be17defc3695",
+      "source_id": "jma_47817_2025_a2",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47817&year=2025&month=&day=&view=a2"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:11:18Z",
+      "license_class": "jma",
+      "sha256": "b1de531faed8ace471c20459c0f0701f11343b5fcdcaddb7a4cf32c610574daf",
+      "source_id": "jma_47817_2025_a4",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47817&year=2025&month=&day=&view=a4"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:12:07Z",
+      "license_class": "jma",
+      "sha256": "6268767597bd804acb45fa51a1078b81f93c2c4942113919fc159c281477a828",
+      "source_id": "jma_47818_2025_a1",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47818&year=2025&month=&day=&view=a1"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:12:08Z",
+      "license_class": "jma",
+      "sha256": "fd2abec86899f8fa16bc9d0b7f0284dc9d13d8254d3bb0cfc2234f3884bf9702",
+      "source_id": "jma_47818_2025_a2",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47818&year=2025&month=&day=&view=a2"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:12:10Z",
+      "license_class": "jma",
+      "sha256": "9c0e4a5f6600ada36e0f72870c5a5caa05497ac89f4638a5c6721ae0ce04e209",
+      "source_id": "jma_47818_2025_a4",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47818&year=2025&month=&day=&view=a4"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:12:58Z",
+      "license_class": "jma",
+      "sha256": "28a77f12ab7c27df514c12f160b66c8393f7cc706a9ba7731978907865a6180e",
+      "source_id": "jma_47843_2025_a1",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47843&year=2025&month=&day=&view=a1"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:13:00Z",
+      "license_class": "jma",
+      "sha256": "41560bf3536cc350d74c6441db4fb8356e9666572cd1a50ae63d91c5917ed060",
+      "source_id": "jma_47843_2025_a2",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47843&year=2025&month=&day=&view=a2"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:13:01Z",
+      "license_class": "jma",
+      "sha256": "ac9e9bf120e655eec2ad558a775b030db2f54be24129713aefa8979a09ddcfe1",
+      "source_id": "jma_47843_2025_a4",
+      "terms_id": "T_JMA",
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/monthly_s1.php?prec_no=84&block_no=47843&year=2025&month=&day=&view=a4"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T04:07:50Z",
+      "license_class": "jma",
+      "sha256": "319d215c6c9243ccb794e925dded2f849a0202f1b2cd74ce607b232f2bc2ddc5",
+      "source_id": "jma_station_table",
+      "terms_id": "T_JMA",
+      "url": "https://www.jma.go.jp/bosai/amedas/const/amedastable.json"
+    }
+  ],
+  "title": "令和2年国勢調査の人口と気象庁の観測点",
+  "transform_code_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.py": "dc7638a6768df4cfd9d5651a71578c975c50b6e00b90788c9a56044de5fad66b",
+    "cli.py": "436c9b5c9d696557c113c0825484b5256b76ac9f3f590ec8422a702d41c591c2",
+    "common.py": "8485121a0b630a5e95213896b9dbb6c575acc0919fde0dbca3ace548b442dbca",
+    "fetch.py": "2ded4db94ea25e677a15830b9c706e941a77b6df4fde8c63c5069a1f0e38097d",
+    "ledger.py": "749768652edcb323e21d853372a3ad65194106a0442f520a69088a45de9be3c2",
+    "mapmaker.py": "234502a00c41dcea7d82b7ffdde923f97169ff703fc7fa79f87ae802fe109334",
+    "notice.py": "657db913671729f9eab7a540f9f3c8306ff6bfc93c992ee4f20006f280a2ddf5",
+    "parse_boundary.py": "2ccf02eb862178a58c26203a46168c3a8936c6cfe6ddc24f6eac40c1ddbab0c3",
+    "parse_jinko.py": "a17025ac9b5389283a6e8735b273615dbf87ca3e7ea8336a0869affb7d3ffb14",
+    "parse_jma.py": "b9d6fa007243d78f4a9ddd3b362f686d460875cb41971d468bfba6d1b323ce72",
+    "parse_kanko.py": "19899b0bab1dec633767f4667e0bf58177aaef6c9baa495d616803236c5e80d3",
+    "privacy_scan.py": "aad4f1ba7867fe5ebb6f243fb5b519eeca4af52bc717733464d0a8b5a4af14b3",
+    "publish_list.py": "3d18309dac4d3a3678d4021dd73e748e4d1ba517bd02630ab86f23a99f8ae25a",
+    "qc_report.py": "7333632cc8b0a823c55b817b547391375345a1ca09bccaab629c3635e3fe6907",
+    "validate.py": "114c56f5e60a97b8a30b96b3f8de3fa8d8b8a85b6c6869c1f1b9ee33f7b31b2a"
+  }
+}
