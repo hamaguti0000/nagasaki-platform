@@ -139,7 +139,7 @@ def report_md(res: dict) -> str:
     lines = ["# 個人情報スキャンの結果", "",
              f"- 対象: 公開対象のファイル {res['files_scanned']} 件(private のディレクトリは読んでいない)",
              f"- 検索語の由来: {', '.join(res['identifiers'])}(値は伏せる)",
-             f"- git: リポジトリ {'あり' if res['git']['repo'] else 'なし(コミット履歴はない)'}、コミット {res['git']['commits']} 件",
+             f"- git: リポジトリ {'あり(コミットの作者情報は `git log --format` で別途確認する)' if res['git']['repo'] else 'なし(コミット履歴はない)'}",
              f"- 検出: {sum(c.values())} 件 {dict(c)}", ""]
     if res["hits"]:
         lines += ["| ファイル | 行 | 種類 | 値(伏せ字) |", "|---|---|---|---|"]

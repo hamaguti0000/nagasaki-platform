@@ -5,7 +5,7 @@
 
 ## 0. 事前に決める(私は決めない)
 - [ ] 作者名 `<PUBLIC_NAME>`(公開してよい表示名)、メール `<GITHUB_ID>+<GITHUB_USERNAME>@users.noreply.github.com`(GitHubの設定 > Emails で、自分の noreply アドレスを確認)
-- [ ] ライセンス(`LICENSE` は MIT の案。著作権者名 `<COPYRIGHT HOLDER>` と、ライセンス自体の確定)
+- [x] ライセンス: `LICENSE`(MIT。著作権者名は設定済み)
 - [ ] 県の統計(観光統計・異動人口調査)の扱い。県への確認が済むまでは、現在の除外のままにする
 - [ ] 要確認の残り8件(`publish/REVIEW_10_FILES.md`)の公開可否
 

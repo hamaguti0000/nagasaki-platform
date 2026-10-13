@@ -55,7 +55,7 @@ SKIP_DIRS = {"__pycache__", ".pytest_cache", ".git"}
 
 def classify(rel: str) -> tuple[str, str, str]:
     import re
-    if re.fullmatch(r"0[1-5]_.*\.md", rel):
+    if re.fullmatch(r"docs/0[1-5]_.*\.md", rel):
         return "review", "設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない)", ""
     if rel in ROOT_FILES:
         return "public", "プロジェクトの説明・設定", ""

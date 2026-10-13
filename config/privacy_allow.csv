@@ -2,3 +2,4 @@ file,contains,reason
 LICENSE,Copyright (c) 2026 hamaguti0000,GitHubのユーザー名を著作権者名にすると、所有者が決めた(公開される値)
 .git/config,name = hamaguti0000,公開用の表示名(GitHubのユーザー名)
 .git/config,hamaguti0000@users.noreply.github.com,noreply形式のメール
+.git/config,git@github.com:hamaguti0000/nagasaki-platform.git,公開先のリモートURL(所有者が指定したSSH形式)

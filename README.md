@@ -7,8 +7,8 @@ validates them (hashes, row counts, completeness, accounting identities, consist
 and draws municipality-level maps. Every source is recorded with URL, timestamp and SHA256; terms of use are quoted
 verbatim and checked against the fetched pages (see `NOTICE`). Prefecture statistics (tourism and migration surveys) are
 **not included** because the prefecture's site restricts reproduction; only fetch scripts, URLs, hashes and a summary
-ledger of revision notes are provided. Stage 1 is implemented; stage 2 (facility-level monthly forecasting) is design only.
-Code: MIT (draft). Data: see `NOTICE`.
+ledger of revision notes are provided. Stage 1 is implemented. Stage 2 (a nationwide municipal panel for analysing and forecasting net migration, applied to Nagasaki's 21 municipalities) is design only, and Power BI is not used in stage 1.
+Code: MIT. Data: see `NOTICE`.
 
 ---
 
@@ -106,7 +106,7 @@ ledger/      台帳: 再算定の注記の要約(数値列を除く)、比較不
 manifest/    取得ログ(URL・SHA256・日時)、取得の実行記録、出力のハッシュ
 data/public/ 国・気象庁のデータのみから作った蓄積データ(出典を付けて公開可)
 outputs/public/ 地図とデータの系譜
-docs/        段2の設計
+docs/        設計文書(01〜05の設計時点の文書、段2、全国パネル、再現手順)
 publish/     公開用・非公開用の一覧、個人情報スキャン、確認用の資料
 ```
 (`raw/`・`data/restricted/`・`outputs/restricted/`・`ledger/restricted/`・`manifest/restricted/`・`warehouse/`・`work/` はリポジトリに含めません。)
@@ -123,5 +123,5 @@ publish/     公開用・非公開用の一覧、個人情報スキャン、確�
 *This project was developed with the assistance of Claude Code (Anthropic). The author is responsible for the design decisions, the data checks and the validation.*
 
 ## ライセンス
-- コード: MIT License(案。`LICENSE`。確定前)
+- コード: MIT License(`LICENSE`)
 - データ: `NOTICE` を参照

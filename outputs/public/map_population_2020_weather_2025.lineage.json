@@ -190,13 +190,13 @@
     "fetch.py": "2ded4db94ea25e677a15830b9c706e941a77b6df4fde8c63c5069a1f0e38097d",
     "ledger.py": "749768652edcb323e21d853372a3ad65194106a0442f520a69088a45de9be3c2",
     "mapmaker.py": "234502a00c41dcea7d82b7ffdde923f97169ff703fc7fa79f87ae802fe109334",
-    "notice.py": "657db913671729f9eab7a540f9f3c8306ff6bfc93c992ee4f20006f280a2ddf5",
+    "notice.py": "cbc31fa152b1ea1663c30629dbdf71a0f3301745e72cc4485e94a17fbf9c82dd",
     "parse_boundary.py": "2ccf02eb862178a58c26203a46168c3a8936c6cfe6ddc24f6eac40c1ddbab0c3",
     "parse_jinko.py": "a17025ac9b5389283a6e8735b273615dbf87ca3e7ea8336a0869affb7d3ffb14",
     "parse_jma.py": "b9d6fa007243d78f4a9ddd3b362f686d460875cb41971d468bfba6d1b323ce72",
     "parse_kanko.py": "19899b0bab1dec633767f4667e0bf58177aaef6c9baa495d616803236c5e80d3",
-    "privacy_scan.py": "aad4f1ba7867fe5ebb6f243fb5b519eeca4af52bc717733464d0a8b5a4af14b3",
-    "publish_list.py": "3d18309dac4d3a3678d4021dd73e748e4d1ba517bd02630ab86f23a99f8ae25a",
+    "privacy_scan.py": "4d841cc5253f848dd1b20220a9d43bc553d32066535c6f68e2eeb25a004168be",
+    "publish_list.py": "f47a3130f0a933371b126401eeb1f38dd69787ebe70d2809ebf1a4954b436263",
     "qc_report.py": "7333632cc8b0a823c55b817b547391375345a1ca09bccaab629c3635e3fe6907",
     "validate.py": "114c56f5e60a97b8a30b96b3f8de3fa8d8b8a85b6c6869c1f1b9ee33f7b31b2a"
   }

@@ -34,7 +34,7 @@ SECTIONS = [
 def build() -> str:
     q = read_csv(ROOT / "ledger" / "terms_quotes_verified.csv")
     out = ["NOTICE", "======", "",
-           "This project's source code is licensed under the MIT License (see LICENSE; draft).",
+           "This project's source code is licensed under the MIT License (see LICENSE).",
            "The data handled by this project come from the providers below. Attribution and conditions of use follow.",
            "The quoted conditions were checked verbatim against the pages fetched on the dates recorded in",
            "ledger/terms_quotes_verified.csv. The interpretation in README.md is not legal advice.", ""]
