@@ -38,3 +38,11 @@ T_SSDS,更新時期(社会・人口統計体系),市区町村データは毎年�
 T_SSDS,項目数(市区町村),市区町村別に約650項目の基礎データを収集しています。,Y,https://www.stat.go.jp/data/ssds/2.html,f0f1ef75e535928de851bb25d6406cfd53f576970a601936b3733846fd352e8d,2026-10-13T05:07:14Z
 T_SSDS,e-Statでの提供,社会・人口統計体系の全ての結果は,Y,https://www.stat.go.jp/data/ssds/1.html,c38f7fce122b963362ac42850fbe95650bfb68cc96722a6e24647532c1fee983,2026-10-13T05:07:12Z
 T_SSDSE,市区町村数と項目数(SSDSE-A),1741市区町村 ×多分野125項目,Y,https://www.nstac.go.jp/SSDSE/,58a92c30332015c57762fd55ac261650c6f0df83cd995d257e3eed88e34a7fa0,2026-10-13T05:06:41Z
+T_SSDSE_SITE,出典の記載(SSDSE),本コンテンツを利用する際は、出典を記載してください。,Y,https://www.nstac.go.jp/SSDSE/,58a92c30332015c57762fd55ac261650c6f0df83cd995d257e3eed88e34a7fa0,2026-10-13T05:06:41Z
+T_SSDSE_SITE,加工した場合の記載例(SSDSE),統計センター SSDSE-A-2024（https://www.nstac.go.jp/use/literacy/SSDSE/）を加工して作成,Y,https://www.nstac.go.jp/SSDSE/,58a92c30332015c57762fd55ac261650c6f0df83cd995d257e3eed88e34a7fa0,2026-10-13T05:06:41Z
+T_SSDSE_SITE,他の規定への準拠(SSDSE),コンテンツの利用やプライバシーポリシー等は、独立行政法人統計センターのサイトに準じます,Y,https://www.nstac.go.jp/SSDSE/,58a92c30332015c57762fd55ac261650c6f0df83cd995d257e3eed88e34a7fa0,2026-10-13T05:06:41Z
+T_NSTAC,商用利用(統計センター),商用利用も可能です。,Y,https://www.nstac.go.jp/info/site-policy/,a93a0c9822e786ff154f2ba3ecac94248baa67484c5b77f02770369bcb0867fd,2026-10-13T06:28:07Z
+T_NSTAC,出典(統計センター),コンテンツを利用する際は出典を記載してください。,Y,https://www.nstac.go.jp/info/site-policy/,a93a0c9822e786ff154f2ba3ecac94248baa67484c5b77f02770369bcb0867fd,2026-10-13T06:28:07Z
+T_NSTAC,編集・加工(統計センター),コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。,Y,https://www.nstac.go.jp/info/site-policy/,a93a0c9822e786ff154f2ba3ecac94248baa67484c5b77f02770369bcb0867fd,2026-10-13T06:28:07Z
+T_NSTAC,第三者の権利(統計センター),コンテンツの中には、第三者（独立行政法人統計センター以外の者をいいます。以下同じ。）が著作権そのほかの利用を有している場合があります。,Y,https://www.nstac.go.jp/info/site-policy/,a93a0c9822e786ff154f2ba3ecac94248baa67484c5b77f02770369bcb0867fd,2026-10-13T06:28:07Z
+T_NSTAC,CC BY互換(統計センター),本利用ルールが適用されるコンテンツは、CC BYに従うことでも利用することができます。,Y,https://www.nstac.go.jp/info/site-policy/,a93a0c9822e786ff154f2ba3ecac94248baa67484c5b77f02770369bcb0867fd,2026-10-13T06:28:07Z

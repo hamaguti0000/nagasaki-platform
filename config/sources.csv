@@ -46,3 +46,17 @@ ref_ssds_gaiyou,reference,https://www.stat.go.jp/data/ssds/1.html,raw/reference/
 ref_ssds_items,reference,https://www.stat.go.jp/data/ssds/2.html,raw/reference/ssds_items.html,,reference,,社会・人口統計体系 基礎データ項目一覧・掲載年次一覧
 ref_ssds_kiso_shi_xlsx,reference,https://www.stat.go.jp/data/ssds/zuhyou/kiso_shi.xlsx,raw/reference/ssds_kiso_shi.xlsx,,reference,,社会・人口統計体系 市区町村 基礎データ項目一覧・掲載年次一覧(239KB)
 ref_stat_riyou,reference,https://www.stat.go.jp/info/riyou.html,raw/reference/stat_riyou.html,,reference,,統計局ホームページ サイトの利用について
+ref_ssdse_past,reference,https://www.nstac.go.jp/use/literacy/ssdse/past/,raw/reference/nstac_ssdse_past.html,,reference,,SSDSE 過去に公開した版の一覧
+ref_ssdse_items,reference,https://www.nstac.go.jp/files/SSDSE_ITEM_2025.xlsx,raw/reference/SSDSE_ITEM_2025.xlsx,,reference,,SSDSE収録項目の一覧(2025年12月更新、40KB)
+ssdse_a_2024,ssdse,https://www.nstac.go.jp/files/SSDSE-A-2024.csv,raw/public/ssdse/SSDSE-A-2024.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2024年版(市区町村)
+ssdse_a_2018,ssdse,https://www.nstac.go.jp/files/static/SSDSE/data/2018/SSDSE-2018A.csv,raw/public/ssdse/SSDSE-A-2018.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2018年版(市区町村)
+ssdse_a_2019,ssdse,https://www.nstac.go.jp/files/static/SSDSE/data/2019/SSDSE-2019A.csv,raw/public/ssdse/SSDSE-A-2019.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2019年版(市区町村)
+ssdse_a_2020,ssdse,https://www.nstac.go.jp/files/static/SSDSE/data/2020/SSDSE-2020A.csv,raw/public/ssdse/SSDSE-A-2020.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2020年版(市区町村)
+ssdse_a_2021,ssdse,https://www.nstac.go.jp/files/static/SSDSE/data/2021/SSDSE-A-2021.csv,raw/public/ssdse/SSDSE-A-2021.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2021年版(市区町村)
+ssdse_a_2022,ssdse,https://www.nstac.go.jp/files/SSDSE-A-2022.csv,raw/public/ssdse/SSDSE-A-2022.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2022年版(市区町村)
+ssdse_a_2023,ssdse,https://www.nstac.go.jp/files/SSDSE-A-2023.csv,raw/public/ssdse/SSDSE-A-2023.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2023年版(市区町村)
+ssdse_a_2025,ssdse,https://www.nstac.go.jp/files/SSDSE-A-2025.csv,raw/public/ssdse/SSDSE-A-2025.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2025年版(市区町村)
+ssdse_a_2026,ssdse,https://www.nstac.go.jp/files/SSDSE-A-2026.csv,raw/public/ssdse/SSDSE-A-2026.csv,,gov_std,T_SSDSE_SITE,SSDSE-A 2026年版(市区町村)
+ref_ssdse_kaisetsu_2026,reference,https://www.nstac.go.jp/files/kaisetsu-A-2026.pdf,raw/reference/kaisetsu-A-2026.pdf,,reference,,SSDSE-市区町村の解説(2026年版)
+ref_soumu_code,reference,https://www.soumu.go.jp/denshijiti/code.html,raw/reference/soumu_code.html,,reference,,全国地方公共団体コード(総務省)
+ref_nstac_site_policy,reference,https://www.nstac.go.jp/info/site-policy/,raw/reference/nstac_site_policy.html,,reference,,統計センター サイトポリシー(SSDSEの利用条件が準じる)

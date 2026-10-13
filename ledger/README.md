@@ -7,6 +7,8 @@
 | `comparability_flags.csv` | 比較不可フラグ(観光客延べ数)。算定方法の見直し(`method_change`)の注記から導く。39行 | `make build` |
 | `validation_results.csv` | 検証30項目の結果(PASS/WARN/FAIL) | `make validate` |
 | `terms_quotes_verified.csv` | 利用規約の引用24件と、取得した規約ページとの逐語照合の結果 | `make build` |
+| `panel_items.csv` | 全国パネルの項目台帳(資料源・周期・版ごとの年度・名称の変更) | `make build` |
+| `panel_code_changes.csv` | 版の間の地域コードの変更(対応づけ) | `make build` |
 | `source_measurements.csv` | ソースごとの実測(ファイル数・容量・解析後の行数) | `make build` |
 
 ## revision_notes.csv の作り方と限界

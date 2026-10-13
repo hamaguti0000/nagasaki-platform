@@ -1,0 +1,2 @@
+from_code,to_code,last_vintage_with_from,first_vintage_with_to,old_name,new_name,prefecture,basis
+R40305,R40231,2019,2020,那珂川町,那珂川市,福岡県,隣り合う版で、同じ都道府県の消えたコードと増えたコードが各1件(推定。廃置分合等情報での確認は未確認)

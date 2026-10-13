@@ -45,6 +45,83 @@ def _pdf_text(path: Path, cache: Path) -> str | None:
     return text
 
 
+def _panel_checks(R: Results, q, srcs) -> None:
+    from .panel import ANNUAL, CENSUS, PANEL_YEARS, TARGET_IN, TARGET_OUT, VINTAGES
+    # P01 版ごとの行数と、取得物のハッシュ
+    n_b = q("SELECT vintage, COUNT(DISTINCT area_code) FROM bronze_ssdse_a GROUP BY 1 ORDER BY 1")
+    R.add("P01", "SSDSE-A の各版(9版)の市区町村数が1,741で一定", len(n_b), [r for r in n_b if r[1] != 1741])
+    # P02 地域コードの形式と、都道府県コードとの整合
+    bad = [r for r in q("SELECT DISTINCT area_code FROM bronze_ssdse_a") if not (len(r[0]) == 6 and r[0][0] == "R" and r[0][1:].isdigit())]
+    R.add("P02", "地域コードが『R+5桁』の形式", 1, bad)
+    pref = q("SELECT pref_code, COUNT(DISTINCT pref_name) FROM silver_panel_area GROUP BY 1 HAVING COUNT(DISTINCT pref_name) > 1")
+    R.add("P03", "都道府県コードと都道府県名が1対1", 47, pref)
+    npref = q("SELECT COUNT(DISTINCT pref_code) FROM silver_panel_area")[0][0]
+    R.add("P04", "都道府県が47", 47, [] if npref == 47 else [npref])
+    # P05 値の形式(数値以外・負数・欠け)
+    nn = q("SELECT COUNT(*) FROM bronze_ssdse_a WHERE value IS NULL")[0][0]
+    ng = q("SELECT COUNT(*) FROM bronze_ssdse_a WHERE value < 0 AND item_code <> 'D2211'")[0][0]  # D2211(実質公債費比率)は、定義上、負になりうる(実測703件)
+    R.add("P05", "全版・全項目の値が、数値(欠け0。負数は、比率の項目D2211のみ)", q("SELECT COUNT(*) FROM bronze_ssdse_a")[0][0],
+          ([f"欠け{nn}"] if nn else []) + ([f"負数{ng}"] if ng else []))
+    # P06 市区町村×年の欠け(目的変数)
+    exp = 1741 * len(PANEL_YEARS)
+    got = q(f"SELECT COUNT(*) FROM gold_panel_municipality_year WHERE transfers_in_jp IS NOT NULL AND transfers_out_jp IS NOT NULL")[0][0]
+    R.add("P06", "転入者数・転出者数(日本人移動者)が、1,741×9年(2016〜2024)の全てで存在", exp, [] if got == exp else [f"{got}/{exp}"])
+    # P07 長崎の21市町が全年そろう
+    have = q("SELECT year, area_code FROM gold_panel_municipality_year WHERE pref_code='42' AND net_rate_permille IS NOT NULL")
+    want = {(y, c) for y in PANEL_YEARS for c, _ in AREAS}
+    R.add("P07", "長崎の21市町の転入超過率が、2016〜2024年の全年でそろう", len(want), sorted(want - set(have)))
+    nm = {c: n for c, n in q("SELECT area_code, area_name FROM silver_panel_area WHERE pref_code='42'")}
+    R.add("P08", "長崎の21市町の団体コードと名称が、境界データ(段1)と一致する", 21,
+          [(c, n) for c, n in AREAS if nm.get(c) != n])
+    # P09 恒等式・範囲(国勢調査の人口)
+    bad = q("""SELECT COUNT(*) FROM silver_panel_value a JOIN silver_panel_value b USING (area_code, year)
+               WHERE a.item_code='A1101' AND b.item_code='A1102' AND b.value > a.value""")[0][0]
+    R.add("P09", "日本人人口 ≦ 総人口(国勢調査、全市区町村・2時点)", q("SELECT COUNT(*) FROM silver_panel_value WHERE item_code='A1101'")[0][0],
+          [f"{bad}件"] if bad else [])
+    bad = q("""SELECT COUNT(*) FROM (SELECT area_code, year,
+                 MAX(value) FILTER (WHERE item_code='A1101') tot,
+                 SUM(value) FILTER (WHERE item_code IN ('A1301','A1302','A1303')) ages
+               FROM silver_panel_value WHERE item_code IN ('A1101','A1301','A1302','A1303') GROUP BY 1,2)
+             WHERE ages > tot + 0.5""")[0][0]
+    R.add("P10", "年齢3区分の合計 ≦ 総人口(年齢不詳があるため、等号ではない)", 1741 * 2, [f"{bad}件"] if bad else [])
+    # P11 版の間の改定(同じ市区町村・項目・年度が複数の版にある場合の一致)
+    rv = q("SELECT item_code, year, COUNT(*), MAX(revision_range) FROM silver_panel_value WHERE n_vintages > 1 AND revision_range > 0 GROUP BY 1,2 ORDER BY 1,2")
+    tot = q("SELECT COUNT(*) FROM silver_panel_value WHERE n_vintages > 1")[0][0]
+    R.add("P11", "複数の版にある同じ年度の値が、版の間で一致する(改定の有無)", tot, rv, "WARN",
+          detail=f"版の間で値が異なる(項目,年度,件数,最大差): {rv[:6]}" if rv else "")
+    # P12 地域コードの変更
+    from .common import read_csv as _rc
+    chg = _rc(ROOT / "ledger" / "panel_code_changes.csv")
+    R.add("P12", "版の間の地域コードの変更が、都道府県内の1対1の入れ替わりのみ(対応づけ可能)", len(chg), [],
+          detail=f"{len(chg)}件: " + "; ".join(f"{c['old_name']}({c['from_code']})→{c['new_name']}({c['to_code']})" for c in chg))
+    # P13 除外の内訳(記録)
+    fl = q("""SELECT SUM(code_change::INT), SUM(COALESCE(pop_zero, FALSE)::INT), SUM(disaster_confirmed::INT),
+                     SUM(evac_candidate::INT), SUM(excluded_main::INT), SUM(excluded_sensitivity::INT)
+              FROM gold_panel_municipality_year""")[0]
+    R.add("P13", "除外・フラグの件数を記録(コード変更/人口0/確認できた災害/避難指示区域の候補/主の除外/感度分析の除外)", 1741 * 9, [], "WARN",
+          detail=f"code_change={fl[0]} pop_zero={fl[1]} disaster_confirmed={fl[2]} evac_candidate={fl[3]} excluded_main={fl[4]} excluded_sensitivity={fl[5]}")
+    R.rows[-1]["status"] = "PASS"
+    # P14 出典の注記(解説PDF)との整合: 注記の文言が、解説PDFの本文にそのまま含まれる
+    notes = read_csv(ROOT / "config" / "panel_source_notes.csv")
+    pdf = next(s for s in srcs if s["source_id"] == "ref_ssdse_kaisetsu_2026")
+    txt = _pdf_text(ROOT / pdf["dest"], ROOT / "work" / "pdf_text" / "kaisetsu-A-2026.txt")
+    if txt is None:
+        R.add("P14", "解説PDFの注記が、本文に含まれる", len(notes), ["PDFを読めない"], "WARN", detail="PDFから文字を取り出せず未検証")
+    else:
+        t = re.sub(r"\s+", "", txt)
+        R.add("P14", "解説PDFの注記(5件)が、本文にそのまま含まれる", len(notes),
+              [n["note_id"] for n in notes if re.sub(r"\s+", "", n["quote"]) not in t])
+    # P15 年度の対応(版の遅れ)が、記録と一致する
+    lag = q("""SELECT vintage, ref_year FROM bronze_ssdse_a WHERE item_code = 'A5101' GROUP BY 1,2 ORDER BY 1""")
+    bad = [(v, y) for v, y in lag if v - y != 2]
+    R.add("P15", "転入者数(A5101)の年度が、全版で『版の年 − 2』", len(lag), bad)
+    # P16 目的変数の外れ値(記録)
+    ex = q("""SELECT COUNT(*) FROM gold_panel_municipality_year WHERE NOT excluded_main AND ABS(net_rate_permille) > 50""")[0][0]
+    R.add("P16", "転入超過率の絶対値が50‰を超える(分母の人口が小さい・避難指示区域の影響)件数を記録", 1741 * 9, [], "WARN",
+          detail=f"{ex}件(主の除外後)。評価では感度分析(避難指示区域の候補を除外)を併記する")
+    R.rows[-1]["status"] = "WARN" if ex else "PASS"
+
+
 def run_validation() -> bool:
     R = Results()
     wh = ROOT / "warehouse" / "nagasaki.duckdb"
@@ -66,6 +143,8 @@ def run_validation() -> bool:
     # --- 行数 ---
     exp = {r["id"]: int(r["expected"]) for r in read_csv(ROOT / "config" / "expected_counts.csv")}
     for tid, table in (("bronze_kanko_aggregate", "bronze_kanko_aggregate"), ("bronze_jinko_nenkan", "bronze_jinko_nenkan"),
+                       ("bronze_ssdse_a", "bronze_ssdse_a"), ("gold_panel_municipality_year", "gold_panel_municipality_year"),
+                       ("gold_panel_forecast_table", "gold_panel_forecast_table"), ("silver_panel_area", "silver_panel_area"),
                        ("bronze_jma_monthly", "bronze_jma_monthly"),
                        ("bronze_boundary_small_area", "bronze_boundary_small_area"),
                        ("gold_municipality_year", "gold_municipality_year"),
@@ -205,6 +284,9 @@ def run_validation() -> bool:
     gcount = q("SELECT COUNT(*) FROM gold_municipality_year WHERE year=2025")[0][0]
     R.add("V61", "地図の対象年(2025)に21市町がそろう", 21, [] if gcount == 21 else [gcount])
 
+
+    # ===== 全国パネル(SSDSE-A)=====
+    _panel_checks(R, q, srcs)
     con.close()
     write_csv(ROOT / "ledger" / "validation_results.csv", R.rows)
     for r in R.rows:

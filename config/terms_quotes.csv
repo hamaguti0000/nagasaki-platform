@@ -38,3 +38,11 @@ T_SSDS,ref_ssds_items,更新時期(社会・人口統計体系),市区町村デ�
 T_SSDS,ref_ssds_items,項目数(市区町村),市区町村別に約650項目の基礎データを収集しています。
 T_SSDS,ref_ssds_gaiyou,e-Statでの提供,社会・人口統計体系の全ての結果は
 T_SSDSE,ref_ssdse,市区町村数と項目数(SSDSE-A),1741市区町村 ×多分野125項目
+T_SSDSE_SITE,ref_ssdse,出典の記載(SSDSE),本コンテンツを利用する際は、出典を記載してください。
+T_SSDSE_SITE,ref_ssdse,加工した場合の記載例(SSDSE),統計センター SSDSE-A-2024（https://www.nstac.go.jp/use/literacy/SSDSE/）を加工して作成
+T_SSDSE_SITE,ref_ssdse,他の規定への準拠(SSDSE),コンテンツの利用やプライバシーポリシー等は、独立行政法人統計センターのサイトに準じます
+T_NSTAC,ref_nstac_site_policy,商用利用(統計センター),商用利用も可能です。
+T_NSTAC,ref_nstac_site_policy,出典(統計センター),コンテンツを利用する際は出典を記載してください。
+T_NSTAC,ref_nstac_site_policy,編集・加工(統計センター),コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。
+T_NSTAC,ref_nstac_site_policy,第三者の権利(統計センター),コンテンツの中には、第三者（独立行政法人統計センター以外の者をいいます。以下同じ。）が著作権そのほかの利用を有している場合があります。
+T_NSTAC,ref_nstac_site_policy,CC BY互換(統計センター),本利用ルールが適用されるコンテンツは、CC BYに従うことでも利用することができます。

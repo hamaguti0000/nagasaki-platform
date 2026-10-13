@@ -69,10 +69,12 @@ STATION_LABEL = {"平戸": (-0.04, 0.05, "right"), "雲仙岳": (0.04, -0.08, "l
 
 
 def _draw(fig_title: str, values: dict[str, float | None], cmap_name: str, norm, cbar_label: str,
-          stations: list[dict], footer: str, out: Path, hatch_codes: set[str] | None = None) -> None:
+          stations: list[dict], footer: str, out: Path, hatch_codes: set[str] | None = None,
+          truncate: bool = True) -> None:
     gj = json.loads(GEOJSON.read_text(encoding="utf-8"))
     base = plt.get_cmap(cmap_name)
-    cmap = colors.LinearSegmentedColormap.from_list(cmap_name + "_t", base(np.linspace(0.18, 1.0, 256)))  # 最小値も背景と区別できる色にする
+    cmap = (colors.LinearSegmentedColormap.from_list(cmap_name + "_t", base(np.linspace(0.18, 1.0, 256)))
+            if truncate else base)  # 連続量は、最小値も背景と区別できる色にする。発散型は切らない
     fig, ax = plt.subplots(figsize=(8.2, 9.4))
     for f in gj["features"]:
         code = f["properties"]["city_code"]
@@ -182,5 +184,23 @@ def make_maps() -> None:
              ["boundary_koku2020_42", "jma_station_table"] +
              [f"jma_{b}_2025_{v}" for b in ("47800", "47805", "47812", "47817", "47818", "47843") for v in ("a1", "a2", "a4")],
              font, "sum(JINKO) by city (令和2年国勢調査)", "公開区分: public(国・気象庁のデータのみ。出典・加工の注記つき)")
+    # --- 3. 日本人移動者の転入超過率(2024年、全国パネルのうち長崎の21市町。public)---
+    rows = con.execute("""SELECT area_code, net_rate_permille FROM gold_panel_municipality_year
+                          WHERE year = 2024 AND pref_code = '42'""").fetchall()
+    vals3 = {c: v for c, v in rows}
+    lim = max(abs(v) for v in vals3.values() if v is not None)
+    norm3 = colors.TwoSlopeNorm(vmin=-lim, vcenter=0.0, vmax=lim)
+    footer3 = ("指標: 2024年の日本人移動者の転入者数−転出者数 を、令和2年(2020年)国勢調査の日本人人口で割った値(人口1,000人あたり、‰)。国内移動のみ。\n"
+               "出典: 独立行政法人 統計センター SSDSE-市区町村(SSDSE-A-2026)(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。"
+               "元データ: 総務省統計局「住民基本台帳人口移動報告年報」「国勢調査」\n" + foot_gis)
+    out3 = ROOT / "outputs" / "public" / "map_net_migration_rate_2024.png"
+    _draw("日本人移動者の転入超過率(2024年、長崎県の市町別、‰)", vals3, "RdBu", norm3, "‰(青=転入超過、赤=転出超過)",
+          [], footer3, out3, truncate=False)
+    _lineage(out3.with_suffix(".lineage.json"), "日本人移動者の転入超過率(2024、長崎の21市町)",
+             ["gold_panel_municipality_year", "silver_panel_value", "silver_ssdse_area_map", "bronze_ssdse_a",
+              "bronze_boundary_small_area"],
+             ["ssdse_a_2026", "boundary_koku2020_42"],
+             font, "(transfers_in_jp - transfers_out_jp) / pop_jp_denominator * 1000 (year=2024)",
+             "公開区分: public(国のデータのみ。SSDSE-A の出典・加工の注記つき)")
     con.close()
     print("map: OK")

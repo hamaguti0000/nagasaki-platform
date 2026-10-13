@@ -117,9 +117,12 @@ def test_jma_value_flags():
 # ---- 公開区分の守り ----
 def test_public_outputs_contain_no_prefecture_statistics_columns():
     forbidden = {"tourists_total", "tourists_per_capita", "pop_start", "pop_end", "births", "deaths", "day_visitors"}
+    panel_ok = {"births", "deaths"}  # 全国パネル(SSDSE-A。国のデータ)の出生数・死亡数。県の異動人口調査の列ではない
     for p in (ROOT / "data" / "public").rglob("*.csv"):
         header = set(p.read_text(encoding="utf-8-sig").splitlines()[0].replace('"', "").split(","))
-        assert not (header & forbidden), (p, header & forbidden)
+        is_panel = p.name.startswith(("gold_panel_", "silver_panel_", "silver_ssdse_"))
+        bad = header & (forbidden - panel_ok if is_panel else forbidden)
+        assert not bad, (p, bad)
 
 
 def test_gitignore_excludes_raw_and_restricted():
@@ -183,3 +186,79 @@ def test_public_output_hashes_exclude_restricted_files():
 def test_gitignore_excludes_restricted_ledger_and_manifest():
     lines = (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
     assert "ledger/restricted/" in lines and "manifest/restricted/" in lines
+
+
+# ---- 全国パネル(段2)----
+def _raw_vintage_value(v: int, code: str, item: str) -> float:
+    import io
+    rows = list(csv.reader(io.StringIO((ROOT / "raw" / "public" / "ssdse" / f"SSDSE-A-{v}.csv").read_bytes().decode("cp932"))))
+    j = rows[0].index(item)
+    return float(next(r for r in rows[3:] if r[0] == code)[j])
+
+
+def test_panel_shape_and_nagasaki_complete():
+    assert q("SELECT COUNT(*), COUNT(DISTINCT area_code), MIN(year), MAX(year) FROM gold_panel_municipality_year") == [(15669, 1741, 2016, 2024)]
+    n = q("SELECT COUNT(*) FROM gold_panel_municipality_year WHERE pref_code='42' AND net_rate_permille IS NOT NULL")[0][0]
+    assert n == 21 * 9
+    got = {c for (c,) in q("SELECT DISTINCT area_code FROM gold_panel_municipality_year WHERE pref_code='42'")}
+    assert got == {c for c, _ in AREAS}
+
+
+def test_panel_values_match_independent_parse_of_raw():
+    # 長崎市(R42201): 2026年版 → 2024年の転入者数・転出者数。別の読み方(csv直読み)と一致する
+    r = q("SELECT transfers_in_jp, transfers_out_jp FROM gold_panel_municipality_year WHERE area_code='42201' AND year=2024")
+    assert r == [(_raw_vintage_value(2026, "R42201", "A5101"), _raw_vintage_value(2026, "R42201", "A5102"))]
+    r = q("SELECT transfers_in_jp FROM gold_panel_municipality_year WHERE area_code='42201' AND year=2016")
+    assert r == [(_raw_vintage_value(2018, "R42201", "A5101"),)]
+
+
+def test_panel_code_change_is_the_single_known_case():
+    with open(ROOT / "ledger" / "panel_code_changes.csv", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    assert [(r["from_code"], r["to_code"]) for r in rows] == [("R40305", "R40231")]
+    assert q("SELECT COUNT(DISTINCT area_code) FROM gold_panel_municipality_year WHERE code_change") == [(1,)]
+
+
+def test_baseline_definitions_on_toy_rows():
+    import numpy as np
+    from nagplat.panel_eval import Row, predict
+    rows = [Row("01001", "01", 2020, 3.0, 1.0, 2.0, 0.0, 20000, 20000),
+            Row("01002", "01", 2020, -3.0, None, None, 0.0, 20000, 20000),
+            Row("02001", "02", 2020, 9.0, 9.0, 9.0, 0.0, 200000, 200000)]
+    xs = {2020: [(r.area_code, r.pref, r.y_t, r.pop_t) for r in rows]}
+    p = predict(rows, xs, "a")
+    assert list(p["B0_previous_year"]) == [3.0, -3.0, 9.0]
+    assert list(p["B1_mean_last3"]) == [2.0, -3.0, 9.0]
+    assert list(p["B2_size_class_mean"]) == [0.0, 0.0, 9.0]       # 同じ階級(1万-3万)の平均 = (3 + -3)/2
+    assert list(p["B3_national_median"]) == [3.0, 3.0, 3.0]       # 中央値
+    pb = predict(rows, xs, "b")                                    # 自分の都道府県を除く統計
+    assert list(pb["B3_national_median"]) == [9.0, 9.0, 0.0]      # 都道府県01の行は、02の値(9.0)。02の行は、01の2値の中央値(0.0)
+
+
+def test_bootstrap_is_reproducible():
+    import numpy as np
+    from nagplat.panel_eval import METHODS, Row, bootstrap_improvement
+    rng = np.random.default_rng(1)
+    rows = [Row(f"4220{i % 3}", "42", 2020, float(i), None, None, float(i) + 1, 1000, 1000) for i in range(30)]
+    preds = {m: np.array([r.y_t + k for r in rows]) for k, m in enumerate(METHODS)}
+    a = bootstrap_improvement(rows, preds, ["42200", "42201", "42202"])
+    b = bootstrap_improvement(rows, preds, ["42200", "42201", "42202"])
+    assert a == b
+
+
+def test_panel_validation_items_present_and_not_failed():
+    with open(ROOT / "ledger" / "validation_results.csv", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    ids = {r["check_id"] for r in rows}
+    assert {f"P{i:02d}" for i in range(1, 17)} <= ids
+    assert [r["check_id"] for r in rows if r["check_id"].startswith("P") and r["status"] == "FAIL"] == []
+
+
+def test_panel_evaluation_tables_are_reproducible():
+    from nagplat import panel_report
+    out = ROOT / "outputs" / "public"
+    names = sorted(p.name for p in out.glob("panel_baseline_*.csv"))
+    assert len(names) == 6
+    before = {n: sha(out / n) for n in names}
+    panel_report.run()
+    assert {n: sha(out / n) for n in names} == before

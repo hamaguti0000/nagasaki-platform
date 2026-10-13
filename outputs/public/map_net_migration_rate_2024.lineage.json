@@ -1,0 +1,62 @@
+{
+  "font": {
+    "file": "NotoSansJP-Regular.ttf",
+    "name": "Noto Sans CJK JP",
+    "sha256": "68a3fc98800b2a27b371f2fb79991daf3633bd89309d4ffaa6946fd587f375b5"
+  },
+  "gold_and_silver_tables": [
+    "gold_panel_municipality_year",
+    "silver_panel_value",
+    "silver_ssdse_area_map",
+    "bronze_ssdse_a",
+    "bronze_boundary_small_area"
+  ],
+  "libraries": {
+    "duckdb": "1.5.6",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "python": "3.12.3"
+  },
+  "metric": "(transfers_in_jp - transfers_out_jp) / pop_jp_denominator * 1000 (year=2024)",
+  "note": "公開区分: public(国のデータのみ。SSDSE-A の出典・加工の注記つき)",
+  "sources": [
+    {
+      "fetched_at_utc": "2026-10-13T04:07:50Z",
+      "license_class": "gov_std",
+      "sha256": "2884d6a5212027d78044994e1fddf353a2cc4a9e1f9a3a9bce51a999bff5c902",
+      "source_id": "boundary_koku2020_42",
+      "terms_id": "T_ESTAT_GIS",
+      "url": "https://www.e-stat.go.jp/gis/statmap-search/data?dlserveyId=A002005212020&code=42&coordSys=1&format=shape&downloadType=5&datum=2000"
+    },
+    {
+      "fetched_at_utc": "2026-10-13T06:26:28Z",
+      "license_class": "gov_std",
+      "sha256": "471ad23bd8f9a7cc01f0c684b9762934e855d2400e3a77608a12171018fc655a",
+      "source_id": "ssdse_a_2026",
+      "terms_id": "T_SSDSE_SITE",
+      "url": "https://www.nstac.go.jp/files/SSDSE-A-2026.csv"
+    }
+  ],
+  "title": "日本人移動者の転入超過率(2024、長崎の21市町)",
+  "transform_code_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.py": "e9b4a9703bb69ec88dc1cdb351fea1e7f9792af6bec0e0777f9e04cbcddfe763",
+    "cli.py": "722bb87d5e29ef04f519cb25242cde35e66b10c944c57e047fbd8465ff521372",
+    "common.py": "8485121a0b630a5e95213896b9dbb6c575acc0919fde0dbca3ace548b442dbca",
+    "fetch.py": "2ded4db94ea25e677a15830b9c706e941a77b6df4fde8c63c5069a1f0e38097d",
+    "ledger.py": "b14cec93a1700d6632734f8cb96c67dceb5e3212a928bb1235c5de11308c1d3c",
+    "mapmaker.py": "6390f38b84ec82b721b8cf16ea652aca0cb8275dee0dc39419bc507c420ef08f",
+    "notice.py": "8155af0e24f4e0a02b4db1b18684a44e12919b336099e35d2720d7dd41f732e7",
+    "panel.py": "9f3de99490125f1ce06639ebe0c2e6dcbb8da545a2c768afe764d3b1736a041a",
+    "panel_eval.py": "678c2dfeb10c5ffb577156cafec348d73c8d401d43d80a1e1bbe77a1d5e7699f",
+    "panel_report.py": "6af841c64727fd142bcb690d1f1ecbc645e08ff6742c51c648efe5cef3f99e1e",
+    "parse_boundary.py": "2ccf02eb862178a58c26203a46168c3a8936c6cfe6ddc24f6eac40c1ddbab0c3",
+    "parse_jinko.py": "a17025ac9b5389283a6e8735b273615dbf87ca3e7ea8336a0869affb7d3ffb14",
+    "parse_jma.py": "b9d6fa007243d78f4a9ddd3b362f686d460875cb41971d468bfba6d1b323ce72",
+    "parse_kanko.py": "19899b0bab1dec633767f4667e0bf58177aaef6c9baa495d616803236c5e80d3",
+    "privacy_scan.py": "4d841cc5253f848dd1b20220a9d43bc553d32066535c6f68e2eeb25a004168be",
+    "publish_list.py": "f47a3130f0a933371b126401eeb1f38dd69787ebe70d2809ebf1a4954b436263",
+    "qc_report.py": "7333632cc8b0a823c55b817b547391375345a1ca09bccaab629c3635e3fe6907",
+    "validate.py": "3ab97f99ed77d17af37980cc5ec0466349244e9d0ce9a01361022856bf4416f4"
+  }
+}

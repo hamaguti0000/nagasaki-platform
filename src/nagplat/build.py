@@ -24,7 +24,10 @@ DATA = ROOT / "data"
 
 # 出力先の区分(table -> class)
 PUBLIC_TABLES = {"bronze_jma_monthly", "bronze_boundary_small_area", "silver_station", "silver_weather_month",
-                 "silver_area", "gold_station_year", "gold_municipality_pop2020"}
+                 "silver_area", "gold_station_year", "gold_municipality_pop2020",
+                 # 全国パネル(SSDSE-A。国のデータのみ)
+                 "silver_panel_area", "silver_ssdse_area_map", "gold_panel_municipality_year",
+                 "gold_panel_forecast_table"}
 RESTRICTED_TABLES = {"bronze_kanko_aggregate", "bronze_jinko_nenkan", "silver_tourism_year",
                      "silver_population_year", "gold_municipality_year"}
 
@@ -218,6 +221,10 @@ def build_all() -> None:
                COUNT(*) AS n_small_areas
         FROM bronze_boundary_small_area GROUP BY city_code""")
 
+    # ---- 全国パネル(SSDSE-A の各年版) ----
+    from .panel import build_panel
+    build_panel(con)
+
     # ---- export ----
     orders = {
         "bronze_kanko_aggregate": "year, area_name", "bronze_jinko_nenkan": "year, source_row",
@@ -227,6 +234,8 @@ def build_all() -> None:
         "silver_population_year": "year, area_code", "silver_station": "block_no",
         "silver_weather_month": "block_no, year, month", "gold_municipality_year": "year, area_code",
         "gold_station_year": "block_no, year", "gold_municipality_pop2020": "area_code",
+        "silver_panel_area": "area_code", "silver_ssdse_area_map": "ssdse_code",
+        "gold_panel_municipality_year": "area_code, year", "gold_panel_forecast_table": "area_code, t",
     }
     for t, o in orders.items():
         _export(con, t, o)

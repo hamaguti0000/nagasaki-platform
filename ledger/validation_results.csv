@@ -1,9 +1,13 @@
 check_id,description,n_checked,n_failed,status,detail
-V01,原本のSHA256が、期待値または取得ログの記録と一致する,245,0,PASS,
+V01,原本のSHA256が、期待値または取得ログの記録と一致する,259,0,PASS,
 V02,県の原本の取得物が、以前の独立した取得の記録(期待SHA256)と一致する,23,0,PASS,
-V03,取得ログに、不一致・HTTPエラーの記録がない(再取得で解消した分を除く),245,0,PASS,
+V03,取得ログに、不一致・HTTPエラーの記録がない(再取得で解消した分を除く),259,0,PASS,
 V10:bronze_kanko_aggregate,bronze_kanko_aggregate の行数が期待値(374)と一致する,374,0,PASS,
 V10:bronze_jinko_nenkan,bronze_jinko_nenkan の行数が期待値(242)と一致する,242,0,PASS,
+V10:bronze_ssdse_a,bronze_ssdse_a の行数が期待値(1932510)と一致する,1932510,0,PASS,
+V10:gold_panel_municipality_year,gold_panel_municipality_year の行数が期待値(15669)と一致する,15669,0,PASS,
+V10:gold_panel_forecast_table,gold_panel_forecast_table の行数が期待値(13928)と一致する,13928,0,PASS,
+V10:silver_panel_area,silver_panel_area の行数が期待値(1741)と一致する,1741,0,PASS,
 V10:bronze_jma_monthly,bronze_jma_monthly の行数が期待値(3960)と一致する,3960,0,PASS,
 V10:bronze_boundary_small_area,bronze_boundary_small_area の行数が期待値(4231)と一致する,4231,0,PASS,
 V10:gold_municipality_year,gold_municipality_year の行数が期待値(231)と一致する,231,0,PASS,
@@ -29,3 +33,19 @@ V52,算定方法の見直しの比較不可フラグの『見直し後の年』�
 V53,注記の市町名が、県の本文PDFの『再算定/算定方法の見直し/訂正』の記述の近くにある,90,0,WARN,PDFからテキストを取り出せず未検証: [2015]
 V60,人口1人あたり観光客延べ数が、全件で数値かつ 0〜100 の範囲,231,0,PASS,
 V61,地図の対象年(2025)に21市町がそろう,21,0,PASS,
+P01,"SSDSE-A の各版(9版)の市区町村数が1,741で一定",9,0,PASS,
+P02,地域コードが『R+5桁』の形式,1,0,PASS,
+P03,都道府県コードと都道府県名が1対1,47,0,PASS,
+P04,都道府県が47,47,0,PASS,
+P05,全版・全項目の値が、数値(欠け0。負数は、比率の項目D2211のみ),1932510,0,PASS,
+P06,"転入者数・転出者数(日本人移動者)が、1,741×9年(2016〜2024)の全てで存在",15669,0,PASS,
+P07,長崎の21市町の転入超過率が、2016〜2024年の全年でそろう,189,0,PASS,
+P08,長崎の21市町の団体コードと名称が、境界データ(段1)と一致する,21,0,PASS,
+P09,日本人人口 ≦ 総人口(国勢調査、全市区町村・2時点),3482,0,PASS,
+P10,年齢3区分の合計 ≦ 総人口(年齢不詳があるため、等号ではない),3482,0,PASS,
+P11,複数の版にある同じ年度の値が、版の間で一致する(改定の有無),41784,0,PASS,
+P12,版の間の地域コードの変更が、都道府県内の1対1の入れ替わりのみ(対応づけ可能),1,0,PASS,1件: 那珂川町(R40305)→那珂川市(R40231)
+P13,除外・フラグの件数を記録(コード変更/人口0/確認できた災害/避難指示区域の候補/主の除外/感度分析の除外),15669,0,PASS,code_change=9 pop_zero=21 disaster_confirmed=9 evac_candidate=108 excluded_main=30 excluded_sensitivity=117
+P14,解説PDFの注記(5件)が、本文にそのまま含まれる,5,0,PASS,
+P15,転入者数(A5101)の年度が、全版で『版の年 − 2』,9,0,PASS,
+P16,転入超過率の絶対値が50‰を超える(分母の人口が小さい・避難指示区域の影響)件数を記録,15669,0,WARN,38件(主の除外後)。評価では感度分析(避難指示区域の候補を除外)を併記する

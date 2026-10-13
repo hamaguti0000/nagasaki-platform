@@ -60,7 +60,24 @@ URL: https://www.keneibus.jp/local/OpenData
 利用条件(原文の引用):
   - 「クリエイティブ・コモンズ表示４．０国際ライセンスの下に提供されています」 [T_KENEIBUS / ライセンス / https://www.keneibus.jp/local/OpenData / 取得 2026-10-13T04:45:24Z]
 
-4. 長崎県の統計(観光統計・異動人口調査)— 含めていない
+4. 全国の市区町村パネル(SSDSE-市区町村、統計センター)
+--------------------------------
+提供元: 独立行政法人 統計センター(元データ: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」)
+URL: https://www.nstac.go.jp/use/literacy/ssdse/
+利用しているデータ: SSDSE-市区町村(SSDSE-A)の2018〜2026年版から組み立てた、全国1,741市区町村×2016〜2024年の指標(転入者数・転出者数〔日本人移動者〕、国勢調査の人口、学校数など)と、その加工物(基準手法の評価の表、地図)。data/public と outputs/public に含む。
+本リポジトリへの収録: 加工物のみ(取得したCSVの原本は含まない)。第三者が権利を有する項目の有無は未確認
+出典表記: 出典: 独立行政法人 統計センター SSDSE-市区町村(SSDSE-A)(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元データ: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+利用条件(原文の引用):
+  - 「本コンテンツを利用する際は、出典を記載してください。」 [T_SSDSE_SITE / 出典の記載(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「統計センター SSDSE-A-2024（https://www.nstac.go.jp/use/literacy/SSDSE/）を加工して作成」 [T_SSDSE_SITE / 加工した場合の記載例(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「コンテンツの利用やプライバシーポリシー等は、独立行政法人統計センターのサイトに準じます」 [T_SSDSE_SITE / 他の規定への準拠(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「商用利用も可能です。」 [T_NSTAC / 商用利用(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「コンテンツを利用する際は出典を記載してください。」 [T_NSTAC / 出典(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。」 [T_NSTAC / 編集・加工(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「コンテンツの中には、第三者（独立行政法人統計センター以外の者をいいます。以下同じ。）が著作権そのほかの利用を有している場合があります。」 [T_NSTAC / 第三者の権利(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「本利用ルールが適用されるコンテンツは、CC BYに従うことでも利用することができます。」 [T_NSTAC / CC BY互換(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+
+5. 長崎県の統計(観光統計・異動人口調査)— 含めていない
 ------------------------------
 提供元: 長崎県
 URL: https://www.pref.nagasaki.jp/pages/site_info.html

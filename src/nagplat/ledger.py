@@ -35,7 +35,7 @@ def verify_terms_quotes() -> list[dict]:
               ("T_PREF_SITE", "terms_pref_site"), ("T_PDL1", "terms_public_data_v1"),
              ("T_KENEIBUS", "ref_keneibus_opendata"), ("T_JMA_HELP", "ref_jma_obsdl_help4"),
              ("T_STAT", "ref_stat_riyou"), ("T_IDOU", "ref_idou_top"), ("T_SSDS", "ref_ssds_items"),
-             ("T_SSDSE", "ref_ssdse"))}
+             ("T_SSDSE", "ref_ssdse"), ("T_SSDSE_SITE", "ref_ssdse"), ("T_NSTAC", "ref_nstac_site_policy"))}
     pages["T_SSDS"] += _page_text(ROOT / srcs["ref_ssds_gaiyou"]["dest"])
     pages["T_JMA_HELP"] += _page_text(ROOT / srcs["ref_jma_obsdl_help1"]["dest"])  # 同じ説明ページ群(help1/help4)
     out, missing = [], []

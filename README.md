@@ -7,7 +7,7 @@ validates them (hashes, row counts, completeness, accounting identities, consist
 and draws municipality-level maps. Every source is recorded with URL, timestamp and SHA256; terms of use are quoted
 verbatim and checked against the fetched pages (see `NOTICE`). Prefecture statistics (tourism and migration surveys) are
 **not included** because the prefecture's site restricts reproduction; only fetch scripts, URLs, hashes and a summary
-ledger of revision notes are provided. Stage 1 is implemented. Stage 2 (a nationwide municipal panel for analysing and forecasting net migration, applied to Nagasaki's 21 municipalities) is design only, and Power BI is not used in stage 1.
+ledger of revision notes are provided. Stage 1 is implemented. Stage 2 (a nationwide municipal panel for analysing and forecasting net migration, applied to Nagasaki's 21 municipalities) has the data acquisition, validation and four baseline forecasts implemented; machine-learning models are not built yet. Power BI is not used.
 Code: MIT. Data: see `NOTICE`.
 
 ---
@@ -22,7 +22,7 @@ Code: MIT. Data: see `NOTICE`.
 - 市町の塗り分け地図とデータの系譜(どのソースから作ったか)を出力する
 - 再実行で同じ結果になることをテストで確認する
 
-段2は**設計のみ**で、未実装です。主案は、全国の市区町村で人口の転入超過を学習し、長崎の21市町に当てはめる分析です(`docs/全国パネル_社会増減_設計.md`)。気象庁の時別値の大規模取得は、サーバー負荷を考えて見送りました(`docs/段2_月次予測_設計.md`)。
+段2(全国の市区町村パネルで転入超過率を分析し、長崎の21市町に当てはめる)は、**データ取得・検証・基準手法の評価まで実装済み**で、機械学習モデルは未実装です(設計: `docs/全国パネル_社会増減_設計.md`、結果: `docs/全国パネル_段2_結果.md`)。気象庁の時別値の大規模取得は、サーバー負荷を考えて見送りました(`docs/段2_月次予測_設計.md`)。
 
 ## 地図(公開してよい版)
 令和2年国勢調査の人口(市町別、対数目盛)と、気象庁の観測点(▲、2025年の平均気温・年降水量)。国と気象庁のデータのみから作成しています。

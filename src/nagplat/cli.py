@@ -1,4 +1,4 @@
-"""コマンド: python -m nagplat.cli <fetch|verify-raw|build|validate|map|publish-list|privacy-scan|qc-report|notice|all>"""
+"""コマンド: python -m nagplat.cli <fetch|verify-raw|build|validate|map|publish-list|privacy-scan|qc-report|notice|panel-eval|all>"""
 from __future__ import annotations
 
 import sys
@@ -42,13 +42,18 @@ def main(argv: list[str]) -> int:
         write()
         print("notice: OK")
         return 0
+    if cmd == "panel-eval":
+        from .panel_report import main as pr_main
+        return pr_main()
     if cmd == "all":
         from .build import build_all
         from .mapmaker import make_maps
         from .validate import run_validation
+        from .panel_report import run as run_panel_eval
         build_all()
         ok = run_validation()
         if ok:
+            run_panel_eval()
             make_maps()
         return 0 if ok else 1
     print(__doc__)
