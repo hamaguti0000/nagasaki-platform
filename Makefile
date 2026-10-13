@@ -4,13 +4,14 @@ PYTHON ?= python3
 export PYTHONPATH := src:.pylibs:$(PYTHONPATH)
 CLI = $(PYTHON) -m nagplat.cli
 
-.PHONY: fetch verify-raw build validate map panel-eval publish-list privacy-scan qc-report notice all test clean
+.PHONY: fetch verify-raw build validate map panel-eval panel-model publish-list privacy-scan qc-report notice all test clean
 fetch:        ; $(CLI) fetch
 verify-raw:   ; $(CLI) verify-raw
 build:        ; $(CLI) build
 validate:     ; $(CLI) validate
 map:          ; $(CLI) map
 panel-eval:   ; $(CLI) panel-eval
+panel-model:  ; $(CLI) panel-model
 publish-list: ; $(CLI) publish-list
 privacy-scan: ; $(CLI) privacy-scan
 qc-report:    ; $(CLI) qc-report
