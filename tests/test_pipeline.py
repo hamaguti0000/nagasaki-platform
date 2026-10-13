@@ -262,3 +262,22 @@ def test_panel_evaluation_tables_are_reproducible():
     before = {n: sha(out / n) for n in names}
     panel_report.run()
     assert {n: sha(out / n) for n in names} == before
+
+
+# ---- 出典の表記と、結果の文言 ----
+def test_ssdse_credit_is_in_readme_and_notice():
+    required = ["SSDSE-A-2018〜SSDSE-A-2026", "https://www.nstac.go.jp/use/literacy/SSDSE/", "を加工して作成",
+                "元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」"]
+    for name in ("README.md", "NOTICE"):
+        text = (ROOT / name).read_text(encoding="utf-8")
+        for r in required:
+            assert r in text, (name, r)
+
+
+def test_results_wording_keeps_the_caveats():
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    doc = (ROOT / "docs" / "全国パネル_段2_結果.md").read_text(encoding="utf-8")
+    for must in ("−1.3%", "勝てなかった", "+0.6%", "勝ったとは言い切れない", "双葉町", "事後の補助的な分析", "分母"):
+        assert must in doc, must
+    for must in ("−1.3%", "+0.6%", "双葉町", "勝ったとは言い切れない", "分母の限界"):
+        assert must in readme, must

@@ -209,6 +209,14 @@ def write_item_ledger(con) -> None:
         for r in ws.iter_rows(min_row=5, values_only=True):
             if r[0] and r[1]:
                 src[str(r[1])] = (r[3], r[4], r[5])
+    units = {}
+    pu = ROOT / "raw" / "reference" / "SSDSE_ITEM_2025.xlsx"  # 項目名【単位】(統計センター。SSDSEの項目一覧)
+    if pu.exists():
+        import re as _re
+        for r in openpyxl.load_workbook(pu, data_only=True).worksheets[0].iter_rows(min_row=2, values_only=True):
+            if r[0] and r[1]:
+                m = _re.search(r"【(.+?)】", str(r[1]))
+                units[str(r[0])] = m.group(1) if m else ""
     roles = {TARGET_IN: "target_component", TARGET_OUT: "target_component"}
     roles.update({c: "feature_annual" for c in ANNUAL})
     roles.update({c: "feature_census" for c in CENSUS})
@@ -220,7 +228,7 @@ def write_item_ledger(con) -> None:
         lags = [v - y for v, y, _ in per]
         pat = "一定(版−%d)" % lags[0] if len(set(lags)) == 1 else "版により異なる"
         dept, srcname, cycle = src.get(code, ("", "", ""))
-        rows.append(dict(item_code=code, item_name=names[-1], role=role, n_vintages=len(per),
+        rows.append(dict(item_code=code, item_name=names[-1], unit=units.get(code, ""), role=role, n_vintages=len(per),
                          ref_year_by_vintage=";".join(f"{v}:{y}" for v, y, _ in per), lag_pattern=pat,
                          name_variants=" / ".join(names) if len(names) > 1 else "",
                          source_dept=dept or "", source_survey=srcname or "", cycle=cycle or ""))

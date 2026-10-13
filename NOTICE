@@ -65,8 +65,8 @@ URL: https://www.keneibus.jp/local/OpenData
 提供元: 独立行政法人 統計センター(元データ: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」)
 URL: https://www.nstac.go.jp/use/literacy/ssdse/
 利用しているデータ: SSDSE-市区町村(SSDSE-A)の2018〜2026年版から組み立てた、全国1,741市区町村×2016〜2024年の指標(転入者数・転出者数〔日本人移動者〕、国勢調査の人口、学校数など)と、その加工物(基準手法の評価の表、地図)。data/public と outputs/public に含む。
-本リポジトリへの収録: 加工物のみ(取得したCSVの原本は含まない)。第三者が権利を有する項目の有無は未確認
-出典表記: 出典: 独立行政法人 統計センター SSDSE-市区町村(SSDSE-A)(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元データ: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+本リポジトリへの収録: 加工物のみ(取得したCSVの原本は含まない)。SSDSE-A の項目のうち 31/125 項目(25%)の値を、版の値のまま取り込んでいる。第三者が権利を有する項目の有無は未確認
+出典表記: 独立行政法人 統計センター SSDSE-A-2018〜SSDSE-A-2026(各版。https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
 利用条件(原文の引用):
   - 「本コンテンツを利用する際は、出典を記載してください。」 [T_SSDSE_SITE / 出典の記載(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
   - 「統計センター SSDSE-A-2024（https://www.nstac.go.jp/use/literacy/SSDSE/）を加工して作成」 [T_SSDSE_SITE / 加工した場合の記載例(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
@@ -76,6 +76,12 @@ URL: https://www.nstac.go.jp/use/literacy/ssdse/
   - 「コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。」 [T_NSTAC / 編集・加工(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
   - 「コンテンツの中には、第三者（独立行政法人統計センター以外の者をいいます。以下同じ。）が著作権そのほかの利用を有している場合があります。」 [T_NSTAC / 第三者の権利(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
   - 「本利用ルールが適用されるコンテンツは、CC BYに従うことでも利用することができます。」 [T_NSTAC / CC BY互換(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「複製、公衆送信、翻訳・変形等の翻案等、自由に利用できます。商用利用も可能です。」 [T_NSTAC / 複製・公衆送信・翻案の自由(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「また編集・加工した情報を、あたかも独立行政法人統計センターが作成したかのような態様で公表・利用することは禁止します。」 [T_NSTAC / 統計センターが作成したかのような公表の禁止 / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「出典：独立行政法人 統計センター SSDSE-市区町村（https://www.nstac.go.jp/use/literacy/SSDSE/）」 [T_SSDSE_SITE / 出典の記載例(SSDSE-市区町村) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「（出典）総務省統計局「統計でみる都道府県・市区町村のすがた（社会・人口統計体系）」」 [T_SSDSE_SITE / 元の出典の記載(SSDSE-A) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「授業や講義でSSDSEを配布する際には、SSDSEの解説も一緒に配布していただき、データの出典や単位などについても意識してお使いいただけますよう、お願いいたします。」 [T_SSDSE_SITE / 配布する際のお願い(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「リンク用バナーとしての画像の利用は自由ですが、画像データの改変、再配布は禁止します。」 [T_SSDSE_SITE / バナー画像の再配布の禁止(データの条件ではない) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
 
 5. 長崎県の統計(観光統計・異動人口調査)— 含めていない
 ------------------------------

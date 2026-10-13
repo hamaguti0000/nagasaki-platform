@@ -13,6 +13,8 @@ from .common import ROOT, write_csv
 
 CREDIT_ESTAT = "出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成"
 CREDIT_JMA = "出典: 気象庁ホームページ「過去の気象データ」を加工して作成"
+CREDIT_SSDSE = ("独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。"
+                "元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」")
 
 RULES = [  # (パス接頭辞, 区分, 理由, 出典の表記)
     ("raw/", "private", "取得した原本(県の統計・本文PDFを含む)。取得スクリプトと manifest/fetch_log.csv(URL・SHA256)で再現する", ""),
@@ -25,6 +27,11 @@ RULES = [  # (パス接頭辞, 区分, 理由, 出典の表記)
     ("data/restricted/", "private", "県の統計由来の蓄積データ。県への確認が済むまで公開しない", ""),
     ("outputs/restricted/", "private", "県の統計の加工値を含む地図。県への確認が済むまで公開しない", ""),
     ("data/public/gold/municipality_boundary.geojson", "public", "e-Stat 境界データの加工物(市町に集約・簡略化)", CREDIT_ESTAT),
+    ("data/public/gold/gold_panel_", "public", "SSDSE-A(国のデータ)から組み立てた全国パネル(値は版の値のまま+差・率・フラグ)", CREDIT_SSDSE),
+    ("data/public/silver/silver_panel_", "public", "SSDSE-A の地域・コードの対応(版の値のまま+フラグ)", CREDIT_SSDSE),
+    ("data/public/silver/silver_ssdse_", "public", "SSDSE-A の地域コードの対応", CREDIT_SSDSE),
+    ("outputs/public/panel_baseline_", "public", "全国パネルでの基準手法の評価(SSDSE-A由来の加工値)", CREDIT_SSDSE),
+    ("outputs/public/map_net_migration", "public", "SSDSE-A と e-Stat 境界データから作った地図", CREDIT_SSDSE + " / " + CREDIT_ESTAT),
     ("data/public/bronze/bronze_jma", "public", "気象庁のデータの整形", CREDIT_JMA),
     ("data/public/silver/silver_weather", "public", "気象庁のデータの整形", CREDIT_JMA),
     ("data/public/silver/silver_station", "public", "気象庁アメダス地点表から作成した観測点の位置", CREDIT_JMA),

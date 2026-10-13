@@ -191,8 +191,8 @@ def make_maps() -> None:
     lim = max(abs(v) for v in vals3.values() if v is not None)
     norm3 = colors.TwoSlopeNorm(vmin=-lim, vcenter=0.0, vmax=lim)
     footer3 = ("指標: 2024年の日本人移動者の転入者数−転出者数 を、令和2年(2020年)国勢調査の日本人人口で割った値(人口1,000人あたり、‰)。国内移動のみ。\n"
-               "出典: 独立行政法人 統計センター SSDSE-市区町村(SSDSE-A-2026)(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。"
-               "元データ: 総務省統計局「住民基本台帳人口移動報告年報」「国勢調査」\n" + foot_gis)
+               "独立行政法人 統計センター SSDSE-A-2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。"
+               "元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」\n" + foot_gis)
     out3 = ROOT / "outputs" / "public" / "map_net_migration_rate_2024.png"
     _draw("日本人移動者の転入超過率(2024年、長崎県の市町別、‰)", vals3, "RdBu", norm3, "‰(青=転入超過、赤=転出超過)",
           [], footer3, out3, truncate=False)
