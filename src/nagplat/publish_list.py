@@ -32,6 +32,7 @@ RULES = [  # (パス接頭辞, 区分, 理由, 出典の表記)
     ("data/public/silver/silver_ssdse_", "public", "SSDSE-A の地域コードの対応", CREDIT_SSDSE),
     ("outputs/public/panel_baseline_", "public", "全国パネルでの基準手法の評価(SSDSE-A由来の加工値)", CREDIT_SSDSE),
     ("outputs/public/forecast_2026_", "public", "2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値)", CREDIT_SSDSE + " / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成"),
+    ("docs/作品1_", "review", "県の統計由来の伸び率2つと、出典の位置のみ。元の表の値は含まない(県への確認が済むまで、要確認)", "出典: 長崎県「長崎県観光統計」(各年版)を加工して作成"),
     ("outputs/public/omura_", "public", "大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない)", CREDIT_SSDSE),
     ("ledger/omura_", "public", "大村市の調査の固定記録(設計・イベントのSHA256、一次資料の確認状況)", ""),
     ("ledger/forecast_2026_manifest.csv", "public", "前向き予測の固定記録(ファイルのSHA256・コードのコミット)", ""),
