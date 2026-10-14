@@ -60,3 +60,6 @@ ssdse_a_2026,ssdse,https://www.nstac.go.jp/files/SSDSE-A-2026.csv,raw/public/ssd
 ref_ssdse_kaisetsu_2026,reference,https://www.nstac.go.jp/files/kaisetsu-A-2026.pdf,raw/reference/kaisetsu-A-2026.pdf,,reference,,SSDSE-市区町村の解説(2026年版)
 ref_soumu_code,reference,https://www.soumu.go.jp/denshijiti/code.html,raw/reference/soumu_code.html,,reference,,全国地方公共団体コード(総務省)
 ref_nstac_site_policy,reference,https://www.nstac.go.jp/info/site-policy/,raw/reference/nstac_site_policy.html,,reference,,統計センター サイトポリシー(SSDSEの利用条件が準じる)
+idou2025_t11_1,idou2025,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040428748&fileKind=0,raw/public/idou/idou2025_t11-1_transfers_in.xlsx,a60963ef1f066deed36e9da8df128a1b5e9b26656701f9da21a1c7e853824cf2,gov_std,T_IDOU,住民基本台帳人口移動報告 年報 2025年 表11-1 他市区町村からの転入者数(全国・都道府県・市区町村)
+idou2025_t11_2,idou2025,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040428749&fileKind=0,raw/public/idou/idou2025_t11-2_transfers_out.xlsx,53944ffa6d3fe4f44fe2c9389ec64bf0a4a376a2e9cd3ac282e36aedaeeea2a3,gov_std,T_IDOU,住民基本台帳人口移動報告 年報 2025年 表11-2 他市区町村への転出者数
+idou2025_t11_3,idou2025,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040428750&fileKind=0,raw/public/idou/idou2025_t11-3_net.xlsx,eeeb88be746badda04d350a8e83a65c072e8c782a0ec208373696d123e5ca1b8,gov_std,T_IDOU,住民基本台帳人口移動報告 年報 2025年 表11-3 転入超過数(恒等式の確認用)

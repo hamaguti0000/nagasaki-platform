@@ -1,4 +1,4 @@
-"""コマンド: python -m nagplat.cli <fetch|verify-raw|build|validate|map|publish-list|privacy-scan|qc-report|notice|panel-eval|panel-model|all>"""
+"""コマンド: python -m nagplat.cli <fetch|verify-raw|build|validate|map|publish-list|privacy-scan|qc-report|notice|panel-eval|panel-model|panel-forward|all>"""
 from __future__ import annotations
 
 import sys
@@ -48,6 +48,9 @@ def main(argv: list[str]) -> int:
     if cmd == "panel-model":
         from .panel_model_report import main as pm_main
         return pm_main()
+    if cmd == "panel-forward":
+        from .panel_forward import main as pf_main
+        return pf_main()
     if cmd == "all":
         from .build import build_all
         from .mapmaker import make_maps
