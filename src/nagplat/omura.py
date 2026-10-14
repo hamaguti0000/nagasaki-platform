@@ -127,13 +127,18 @@ def boot_spearman(x: np.ndarray, y: np.ndarray, seed: int = SEED) -> tuple[float
         v = spearman(x[i], y[i])
         if v == v:
             bs.append(v)
+    if not bs:   # 全ての再標本で定数になる場合(判定は「判断できない」)
+        return est, float("nan"), float("nan")
     lo, hi = np.percentile(bs, [2.5, 97.5])
     return est, float(lo), float(hi)
 
 
 def indicators_for(p, ss, code) -> dict[str, float | None]:
     r15 = p[code].get(2016)
-    r20 = p[code].get(2020)
+    # パネルの国勢調査の項目は、年tの行に「t−1年の調査」を持つ(2020年調査の値は2021年の行。census_year_asof で確認)
+    r20 = p[code].get(2021)
+    if r20 is not None and r20["census_year_asof"] != "2020":
+        r20 = None
     r23 = p[code].get(2023)
     r24 = p[code].get(2024)
     r16 = p[code].get(2016)
@@ -147,7 +152,7 @@ def indicators_for(p, ss, code) -> dict[str, float | None]:
     hh20 = _f(r20["households_asof"]) if r20 else None
     out["I1a"] = div(hh20, hh15)
     out["I1b"] = div(s.get("A710201"), s.get("A710101"))
-    pj20 = pop2020(p, code)
+    pj20 = pop2020(p, code)   # 分母(2020年の行は2020年調査。census_year_denominator)
     out["I3a"] = div(s.get("C2208"), pj20)
     out["I3b"] = div(s.get("C2108"), pj20)
     out["I3c"] = div(s.get("F2221"), _f(r20["employed_asof"]) if r20 else None)
@@ -350,6 +355,7 @@ def main() -> int:
         srows.append(row)
     write_csv(OUT / "omura_sensitivity.csv", srows)
 
+    plot()
     print("前提(両方の中央値より大きい年数):", main_res["years_above_both"], "/ 9。差が開いた年:", main_res["open_year"])
     for r in irows:
         print(r["indicator"], r["verdict"], r["omura"], r["c2_median"], r["share_c2_better_than_omura"], r["spearman_c2"])
@@ -358,6 +364,40 @@ def main() -> int:
 
 def _r(x):
     return None if x is None or (isinstance(x, float) and x != x) else round(float(x), 4)
+
+
+
+
+def plot() -> None:
+    """年ごとの推移の図(outputs/public/omura_yearly.csv から)。"""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    plt.rcParams["font.family"] = "Noto Sans CJK JP"
+    rows = list(csv.DictReader(open(OUT / "omura_yearly.csv", encoding="utf-8")))
+    ys = [int(r["year"]) for r in rows]
+    g = lambda k: [float(r[k]) for r in rows]  # noqa: E731
+    fig, axs = plt.subplots(1, 2, figsize=(10, 4.2))
+    ax = axs[0]
+    ax.fill_between(ys, g("c2_p25"), g("c2_p75"), color="#bbbbbb", alpha=0.6, label="全国の同規模の市(C2)の四分位範囲")
+    ax.plot(ys, g("c2_median"), color="#555555", label="C2の中央値")
+    ax.plot(ys, g("c1_median"), color="#2b8cbe", ls="--", label="県内の市(C1)の中央値")
+    ax.plot(ys, g("omura_net_permille"), color="#d7301f", marker="o", label="大村市")
+    ax.axvline(2022.73, color="#999999", lw=0.8, ls=":")
+    ax.text(2022.78, 8.2, "西九州新幹線開業\n(2022-09-23)", fontsize=7, color="#555555")
+    ax.set_title("転入超過率(‰)", loc="left", fontsize=10)
+    ax.legend(fontsize=7, loc="upper left")
+    ax = axs[1]
+    ax.plot(ys, g("omura_in_rate"), color="#d7301f", marker="o", label="大村市 転入率")
+    ax.plot(ys, g("omura_out_rate"), color="#d7301f", marker="s", ls="--", label="大村市 転出率")
+    ax.plot(ys, g("c2_median_in_rate"), color="#555555", label="C2中央値 転入率")
+    ax.plot(ys, g("c2_median_out_rate"), color="#555555", ls="--", label="C2中央値 転出率")
+    ax.set_title("転入率・転出率(‰。分母は日本人人口)", loc="left", fontsize=10)
+    ax.legend(fontsize=7)
+    fig.text(0.01, 0.01, "出典: 統計センター SSDSE-A を加工して作成(日本人移動者)。分母は2015年・2020年の国勢調査。1市の記述であり、原因を示すものではない。",
+             fontsize=6, color="#333333")
+    fig.tight_layout(rect=(0, 0.04, 1, 1))
+    fig.savefig(OUT / "omura_yearly.png", dpi=150)
 
 
 if __name__ == "__main__":

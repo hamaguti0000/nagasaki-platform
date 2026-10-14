@@ -58,6 +58,7 @@ docs/全国パネル_段2_結果.md,public,1,17538,設計・説明,
 docs/全国パネル_段3_結果.md,public,1,18582,設計・説明,
 docs/全国パネル_社会増減_設計.md,public,1,21183,設計・説明,
 docs/再現手順_自分で理解するために.md,public,1,4951,設計・説明,
+docs/大村市_なぜ_設計.md,public,1,12494,設計・説明,
 docs/段2_月次予測_設計.md,public,1,17686,設計・説明,
 docs/段4_前向き予測_設計.md,public,1,8544,設計・説明,
 docs/段4_前向き予測_設計_追記1.md,public,1,5597,設計・説明,
@@ -65,6 +66,8 @@ ledger/README.md,public,1,3388,台帳の説明,
 ledger/comparability_flags.csv,review,1,4208,県の注記から導いた比較不可フラグ(派生物),出典: 長崎県「長崎県観光統計」(各年版)の注記から作成
 ledger/forecast_2026_addenda.csv,public,1,404,台帳の説明,
 ledger/forecast_2026_manifest.csv,public,1,1816,前向き予測の固定記録(ファイルのSHA256・コードのコミット),
+ledger/omura_design_manifest.csv,public,1,744,大村市の調査の固定記録(設計・イベントのSHA256、一次資料の確認状況),
+ledger/omura_events.csv,public,1,2425,大村市の調査の固定記録(設計・イベントのSHA256、一次資料の確認状況),
 ledger/panel_code_changes.csv,public,1,306,台帳の説明,
 ledger/panel_items.csv,public,1,7473,台帳の説明,
 ledger/panel_leakage_register.csv,public,1,5975,予測に使う特徴量のリーク(時点)の一覧と対策(国のデータのみ),
@@ -91,6 +94,11 @@ outputs/public/map_net_migration_rate_2024.lineage.json,public,1,3444,SSDSE-A �
 outputs/public/map_net_migration_rate_2024.png,public,1,253349,SSDSE-A と e-Stat 境界データから作った地図,独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成
 outputs/public/map_population_2020_weather_2025.lineage.json,public,1,10081,国・気象庁のデータのみから作成した地図と系譜,出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成 / 出典: 気象庁ホームページ「過去の気象データ」を加工して作成
 outputs/public/map_population_2020_weather_2025.png,public,1,270190,国・気象庁のデータのみから作成した地図と系譜,出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成 / 出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+outputs/public/omura_comparison_groups.csv,public,1,30647,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/omura_indicators.csv,public,1,1972,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/omura_sensitivity.csv,public,1,2528,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/omura_yearly.csv,public,1,1382,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/omura_yearly.png,public,1,141523,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
 outputs/public/panel_baseline_by_prefecture.csv,public,1,4147,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
 outputs/public/panel_baseline_by_year.csv,public,1,3189,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
 outputs/public/panel_baseline_nagasaki.csv,public,1,797,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
@@ -118,12 +126,13 @@ raw/,private,262,58149801,取得した原本(県の統計・本文PDFを含む)�
 requirements.txt,public,1,222,プロジェクトの説明・設定,
 src/nagplat/__init__.py,public,1,0,コード,
 src/nagplat/build.py,public,1,14937,コード,
-src/nagplat/cli.py,public,1,2338,コード,
+src/nagplat/cli.py,public,1,2435,コード,
 src/nagplat/common.py,public,1,2698,コード,
 src/nagplat/fetch.py,public,1,6978,コード,
 src/nagplat/ledger.py,public,1,4842,コード,
 src/nagplat/mapmaker.py,public,1,13376,コード,
 src/nagplat/notice.py,public,1,6471,コード,
+src/nagplat/omura.py,public,1,18834,コード,
 src/nagplat/panel.py,public,1,14314,コード,
 src/nagplat/panel_eval.py,public,1,6967,コード,
 src/nagplat/panel_forward.py,public,1,12552,コード,
@@ -135,12 +144,13 @@ src/nagplat/parse_jinko.py,public,1,3322,コード,
 src/nagplat/parse_jma.py,public,1,2005,コード,
 src/nagplat/parse_kanko.py,public,1,2175,コード,
 src/nagplat/privacy_scan.py,public,1,7856,コード,
-src/nagplat/publish_list.py,public,1,9279,コード,
+src/nagplat/publish_list.py,public,1,9589,コード,
 src/nagplat/qc_report.py,public,1,3651,コード,
 src/nagplat/validate.py,public,1,21386,コード,
 tests/conftest.py,public,1,196,テスト,
+tests/test_omura.py,public,1,2741,テスト,
 tests/test_panel_forward.py,public,1,7497,テスト,
 tests/test_panel_model.py,public,1,8767,テスト,
 tests/test_pipeline.py,public,1,12937,テスト,
-warehouse/,private,1,29372416,作業用のDuckDBファイル(再生成できる。県統計由来を含む),
+warehouse/,private,1,28848128,作業用のDuckDBファイル(再生成できる。県統計由来を含む),
 work/,private,12,161678799,作業用(PDFのテキスト抽出など。県の本文PDF由来),
