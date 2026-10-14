@@ -118,5 +118,7 @@ def test_manifest_matches_files_if_frozen():
     if not p.exists():
         pytest.skip("まだ固定していない")
     for r in csv.DictReader(open(p, encoding="utf-8")):
-        if r["kind"] == "file":
+        if r["kind"] == "file" and (ROOT / r["path"]).exists():       # raw/ は公開しないため、クローン先にはない
             assert sha(ROOT / r["path"]) == r["sha256"], r["path"]
+        elif r["kind"] == "file":
+            assert r["path"].startswith("raw/"), r["path"]

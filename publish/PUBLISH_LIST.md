@@ -52,6 +52,7 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `docs/段2_月次予測_設計.md` | 1 | 17,686 | 設計・説明 |  |
 | `docs/段4_前向き予測_設計.md` | 1 | 8,544 | 設計・説明 |  |
 | `ledger/README.md` | 1 | 3,388 | 台帳の説明 |  |
+| `ledger/forecast_2026_manifest.csv` | 1 | 1,816 | 前向き予測の固定記録(ファイルのSHA256・コードのコミット) |  |
 | `ledger/panel_code_changes.csv` | 1 | 306 | 台帳の説明 |  |
 | `ledger/panel_items.csv` | 1 | 7,473 | 台帳の説明 |  |
 | `ledger/panel_leakage_register.csv` | 1 | 5,975 | 予測に使う特徴量のリーク(時点)の一覧と対策(国のデータのみ) |  |
@@ -87,10 +88,10 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `outputs/public/panel_model_overall.csv` | 1 | 1,713 | 全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 |
 | `publish/EXTERNAL_ACCESS_CHECK.md` | 1 | 3,398 | この一覧 |  |
 | `publish/GIT_AUTHOR_PROPOSAL.md` | 1 | 2,924 | この一覧 |  |
-| `publish/PRIVACY_SCAN.md` | 1 | 381 | この一覧 |  |
+| `publish/PRIVACY_SCAN.md` | 1 | 390 | この一覧 |  |
 | `publish/PRIVATE_REPO_CHECKLIST.md` | 1 | 4,392 | この一覧 |  |
-| `publish/PUBLISH_LIST.csv` | 1 | 21,771 | この一覧 |  |
-| `publish/PUBLISH_LIST.md` | 1 | 23,364 | この一覧 |  |
+| `publish/PUBLISH_LIST.csv` | 1 | 24,066 | この一覧 |  |
+| `publish/PUBLISH_LIST.md` | 1 | 25,722 | この一覧 |  |
 | `publish/REVIEW_10_FILES.md` | 1 | 7,137 | この一覧 |  |
 | `requirements.txt` | 1 | 222 | プロジェクトの説明・設定 |  |
 | `src/nagplat/__init__.py` | 1 | 0 | コード |  |
@@ -116,7 +117,7 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `src/nagplat/qc_report.py` | 1 | 3,651 | コード |  |
 | `src/nagplat/validate.py` | 1 | 21,386 | コード |  |
 | `tests/conftest.py` | 1 | 196 | テスト |  |
-| `tests/test_panel_forward.py` | 1 | 5,475 | テスト |  |
+| `tests/test_panel_forward.py` | 1 | 5,668 | テスト |  |
 | `tests/test_panel_model.py` | 1 | 8,767 | テスト |  |
 | `tests/test_pipeline.py` | 1 | 12,937 | テスト |  |
 
