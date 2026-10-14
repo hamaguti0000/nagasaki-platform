@@ -6,11 +6,11 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 
 | パス | ファイル数 | 容量(byte) | 理由 | 必要な表記 |
 |---|---|---|---|---|
-| `.gitignore` | 1 | 609 | プロジェクトの説明・設定 |  |
+| `.gitignore` | 1 | 656 | プロジェクトの説明・設定 |  |
 | `LICENSE` | 1 | 1,292 | プロジェクトの説明・設定 |  |
 | `Makefile` | 1 | 955 | プロジェクトの説明・設定 |  |
-| `NOTICE` | 1 | 17,357 | プロジェクトの説明・設定 |  |
-| `README.md` | 1 | 20,788 | プロジェクトの説明・設定 |  |
+| `NOTICE` | 1 | 17,826 | プロジェクトの説明・設定 |  |
+| `README.md` | 1 | 22,532 | プロジェクトの説明・設定 |  |
 | `config/expected_counts.csv` | 1 | 811 | 取得元URL・期待ハッシュ・期待行数・規約の引用文 |  |
 | `config/panel_source_notes.csv` | 1 | 871 | 取得元URL・期待ハッシュ・期待行数・規約の引用文 |  |
 | `config/privacy_allow.csv` | 1 | 441 | 取得元URL・期待ハッシュ・期待行数・規約の引用文 |  |
@@ -101,9 +101,9 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `publish/EXTERNAL_ACCESS_CHECK.md` | 1 | 3,398 | この一覧 |  |
 | `publish/GIT_AUTHOR_PROPOSAL.md` | 1 | 2,924 | この一覧 |  |
 | `publish/PRIVACY_SCAN.md` | 1 | 417 | この一覧 |  |
-| `publish/PRIVATE_REPO_CHECKLIST.md` | 1 | 4,392 | この一覧 |  |
-| `publish/PUBLISH_LIST.csv` | 1 | 27,661 | この一覧 |  |
-| `publish/PUBLISH_LIST.md` | 1 | 29,427 | この一覧 |  |
+| `publish/PRIVATE_REPO_CHECKLIST.md` | 1 | 4,582 | この一覧 |  |
+| `publish/PUBLISH_LIST.csv` | 1 | 28,003 | この一覧 |  |
+| `publish/PUBLISH_LIST.md` | 1 | 29,785 | この一覧 |  |
 | `publish/REVIEW_10_FILES.md` | 1 | 7,137 | この一覧 |  |
 | `requirements.txt` | 1 | 222 | プロジェクトの説明・設定 |  |
 | `src/nagplat/__init__.py` | 1 | 0 | コード |  |
@@ -113,7 +113,7 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `src/nagplat/fetch.py` | 1 | 6,978 | コード |  |
 | `src/nagplat/ledger.py` | 1 | 4,842 | コード |  |
 | `src/nagplat/mapmaker.py` | 1 | 13,376 | コード |  |
-| `src/nagplat/notice.py` | 1 | 6,471 | コード |  |
+| `src/nagplat/notice.py` | 1 | 6,915 | コード |  |
 | `src/nagplat/omura.py` | 1 | 18,834 | コード |  |
 | `src/nagplat/panel.py` | 1 | 14,314 | コード |  |
 | `src/nagplat/panel_eval.py` | 1 | 6,967 | コード |  |
@@ -126,7 +126,7 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `src/nagplat/parse_jma.py` | 1 | 2,005 | コード |  |
 | `src/nagplat/parse_kanko.py` | 1 | 2,175 | コード |  |
 | `src/nagplat/privacy_scan.py` | 1 | 7,856 | コード |  |
-| `src/nagplat/publish_list.py` | 1 | 9,844 | コード |  |
+| `src/nagplat/publish_list.py` | 1 | 9,948 | コード |  |
 | `src/nagplat/qc_report.py` | 1 | 3,651 | コード |  |
 | `src/nagplat/validate.py` | 1 | 21,386 | コード |  |
 | `tests/conftest.py` | 1 | 196 | テスト |  |
@@ -144,7 +144,7 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `docs/03_MVP提案.md` | 1 | 6,759 | 設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない) |  |
 | `docs/04_予測・機械学習の設計.md` | 1 | 6,559 | 設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない) |  |
 | `docs/05_リスクと未確認.md` | 1 | 8,067 | 設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない) |  |
-| `docs/作品1_データの落とし穴_出典.md` | 1 | 3,916 | 県の統計由来の伸び率2つと、出典の位置のみ。元の表の値は含まない(県への確認が済むまで、要確認) | 出典: 長崎県「長崎県観光統計」(各年版)を加工して作成 |
+| `docs/作品1_データの落とし穴_出典.md` | 1 | 4,238 | 県の統計由来の少数の加工値(長崎市の観光客延べ数の2つの伸び率)と、出典の位置のみ。元の表の値は含まない。例外として載せる(この例外の可否も、県への確認の対象。未確認) | 出典: 長崎県「長崎県観光統計」(各年版)を加工して作成 |
 | `ledger/comparability_flags.csv` | 1 | 4,208 | 県の注記から導いた比較不可フラグ(派生物) | 出典: 長崎県「長崎県観光統計」(各年版)の注記から作成 |
 | `ledger/validation_results.csv` | 1 | 5,403 | 県統計を含む検証結果(件数と合否。値は失敗時の例のみ) |  |
 | `manifest/fetch_log.csv` | 1 | 70,715 | 取得ログ(URL・SHA256・日時)。県のURLとハッシュを含む(設計で置くと決めた範囲) |  |

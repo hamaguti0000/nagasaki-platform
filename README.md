@@ -36,7 +36,7 @@ make all                          # 蓄積 → 検証 → 全国パネルの評�
 | 1,739市区町村・タグ・2027年4月ごろ(作品3) | `outputs/public/forecast_2026_README.md`、`ledger/forecast_2026_manifest.csv` |
 | 9年・差 +5.8〜+8.3‰(2016〜2023年)、+14.2‰(2024年)(作品4) | `docs/大村市_なぜ_結果.md` §2、`outputs/public/omura_yearly.csv` |
 
-> **次の節以降は、段階ごとに書いてきた詳細です。** 古い記述が残っています: 「機械学習モデルは未実装」「テスト 19件」は段2・段1当時の記述で、現在は段3・段4があり、テストは60件です。
+> **次の節以降は、段階ごとに書いてきた詳細です。** 段階の記述は、各節の時点のものです(段2の節は基準手法のみ、段3・段4・大村市は末尾)。
 
 ---
 
@@ -47,9 +47,9 @@ It fetches national statistics (e-Stat statistical GIS boundaries and the 2020 c
 Japan Meteorological Agency's monthly observations, stores them in layered tables (bronze/silver/gold; DuckDB and Parquet),
 validates them (hashes, row counts, completeness, accounting identities, consistency with the prefecture's revision notes),
 and draws municipality-level maps. Every source is recorded with URL, timestamp and SHA256; terms of use are quoted
-verbatim and checked against the fetched pages (see `NOTICE`). Prefecture statistics (tourism and migration surveys) are
-**not included** because the prefecture's site restricts reproduction; only fetch scripts, URLs, hashes and a summary
-ledger of revision notes are provided. Stage 1 is implemented. Stage 2 (a nationwide municipal panel for analysing and forecasting net migration, applied to Nagasaki's 21 municipalities) has the data acquisition, validation and four baseline forecasts implemented; machine-learning models are not built yet. Power BI is not used.
+verbatim and checked against the fetched pages (see `NOTICE`). Prefecture statistics (tourism and migration surveys): the original tables, accumulated data and maps are
+**not included** because the prefecture's site restricts reproduction (pending the prefecture's confirmation); only fetch scripts, URLs, hashes and a summary
+ledger of revision notes are provided. As a limited exception, two derived growth rates for Nagasaki City's tourist counts are shown with their source locations (`docs/作品1_データの落とし穴_出典.md`). Stage 1 (pipeline) is implemented. Stage 2 (a nationwide municipal panel for net migration, applied to Nagasaki's 21 municipalities) has baseline forecasts; Stage 3 (Ridge and gradient boosting) is implemented and did not beat the baselines; Stage 4 is a pre-registered forecast of 2026 (not yet verified); an Omura City case study did not identify the cause. Power BI is not used.
 Code: MIT. Data: see `NOTICE`.
 
 ---
@@ -60,11 +60,11 @@ Code: MIT. Data: see `NOTICE`.
 段1(実装済み)でできること:
 - 国(e-Stat 統計GIS)と気象庁のデータを、**取得元URL・日時・SHA256を記録しながら**取得する
 - 取得物を、層(bronze → silver → gold)に分けて DuckDB / Parquet に蓄積する
-- 取得物の**ハッシュ・行数・年×市町の欠け・恒等式・県の再算定の注記との整合**を検証する(30項目)
+- 取得物の**ハッシュ・行数・年×市町の欠け・恒等式・県の再算定の注記との整合**を検証する(段1は30項目。現在の検証は全国パネルの検査を加えて50項目)
 - 市町の塗り分け地図とデータの系譜(どのソースから作ったか)を出力する
 - 再実行で同じ結果になることをテストで確認する
 
-段2(全国の市区町村パネルで転入超過率を分析し、長崎の21市町に当てはめる)は、**データ取得・検証・基準手法の評価まで実装済み**で、機械学習モデルは未実装です(設計: `docs/全国パネル_社会増減_設計.md`、結果: `docs/全国パネル_段2_結果.md`)。気象庁の時別値の大規模取得は、サーバー負荷を考えて見送りました(`docs/段2_月次予測_設計.md`)。
+段2(全国の市区町村パネルで転入超過率を分析し、長崎の21市町に当てはめる)は、**データ取得・検証・基準手法の評価まで実装済み**です。機械学習モデルは**段3で実装済み**(下の「段3」)で、段4(前向き予測)と大村市の調査(1市の事例)が続きます(設計: `docs/全国パネル_社会増減_設計.md`、結果: `docs/全国パネル_段2_結果.md`)。気象庁の時別値の大規模取得は、サーバー負荷を考えて見送りました(`docs/段2_月次予測_設計.md`)。
 
 ## 地図(公開してよい版)
 令和2年国勢調査の人口(市町別、対数目盛)と、気象庁の観測点(▲、2025年の平均気温・年降水量)。国と気象庁のデータのみから作成しています。
@@ -79,9 +79,9 @@ Python 3.12 で確認しています(他の版は未検証)。
 
 ```bash
 pip install -r requirements.txt     # 仮想環境を推奨
-make fetch      # 原本の取得(約230件。同じホストへは1.5秒間隔。初回は約8分)
+make fetch      # 原本の取得(取得ログは262件。同じホストへは1.5秒間隔。初回は約8分=旧記載の値で、再計測は未実施)
 make all        # build(蓄積)→ validate(検証)→ map(地図)
-make test       # テスト(再ビルドの同一性を含む。約2分)
+make test       # テスト(60件。再ビルドの同一性・再実行の一致を含む。約16分=990秒の実測)
 ```
 その他: `make verify-raw`(原本のハッシュ確認)、`make publish-list`(公開用・非公開用の一覧)、
 `python -m nagplat.cli privacy-scan`(個人情報のスキャン)、`python -m nagplat.cli qc-report`(気象の品質記号の集計)。
@@ -97,7 +97,7 @@ flowchart LR
   C --> D[bronze<br/>原本の構造のままParquet化]
   D --> E[silver<br/>市町コード・年・単位を揃える]
   E --> F[gold<br/>指標・記号の方針を適用]
-  F --> G[validate<br/>30項目]
+  F --> G[validate<br/>50項目]
   G -->|FAILなら停止| H[map<br/>PNG + 系譜JSON]
   I[ledger/<br/>再算定の注記・比較不可フラグ] --> G
   I --> F
@@ -107,14 +107,14 @@ flowchart LR
 2. **蓄積**: bronze(原本の構造のまま)→ silver(団体コード・年・単位を揃える)→ gold(指標)。DuckDB(スレッド数1、並び順を指定)。
 3. **検証**: ハッシュ、行数、年×市町の網羅、恒等式(観光客延べ数=日帰り+宿泊、人口増減=社会増減+自然増減 など)、県の注記との整合。FAILがあれば地図を作らない。
 4. **地図**: 市町の塗り分け(PNG)と、データの系譜(JSON: ソース・ハッシュ・コードのハッシュ・フォントとライブラリの版)。
-5. **テスト**: pytest 19件。再ビルドで、CSV・GeoJSON・PNG・系譜のハッシュが一致することを確認。
+5. **テスト**: pytest 60件(段1の19件+段2〜段4・大村市の分)。再ビルドで、CSV・GeoJSON・PNG・系譜のハッシュが一致することを確認。
 
-## 実測(2026-10-13 時点)
+## 実測(2026-10-14 時点。取得・検証・テストは再計測。気象の記号の行は2026-10-13の値)
 | 項目 | 値 |
 |---|---|
-| 取得 | 245件、全て HTTP 200、ハッシュ不一致 0 |
-| 検証 | 30項目: PASS 28 / WARN 2 / FAIL 0 |
-| テスト | 19件(`tests/`) |
+| 取得 | 262件(`manifest/fetch_log.csv`)、全て HTTP 200、期待ハッシュとの不一致 0 |
+| 検証 | 50項目: PASS 47 / WARN 3 / FAIL 0(`ledger/validation_results.csv`。WARN は V24・V53・P16) |
+| テスト | 60件(`tests/`)。全体の実行は約16分(990秒) |
 | 気象庁の記号つきの値 | 90値(54か月)。準正常値 85、資料不足値 5(扱いは `docs/段2_月次予測_設計.md` B) |
 
 取得物の容量・行数は `ledger/source_measurements.csv`、検証結果は `ledger/validation_results.csv`。
@@ -128,7 +128,7 @@ flowchart LR
 | 月ごとの気象データ・観測点の位置 | 気象庁 | 出典・加工の記載が必要。公共データ利用規約(第1.0版)準拠、商用利用も可能 | 加工物のみ(`data/public`) |
 | バス情報(GTFS。件数の実測のみ) | 長崎県営バス | CC BY 4.0(事業者のページの記載) | 含まない |
 | 全国の市区町村パネル(転入者数・転出者数、国勢調査の人口、学校数など) | 統計センター SSDSE-市区町村(元: 総務省統計局 社会・人口統計体系) | 出典・加工の記載が必要。商用利用も可能(統計センターのサイトポリシーに準じる) | 加工物のみ(`data/public`。SSDSE-A の31/125項目を、版の値のまま) |
-| 観光統計・異動人口調査 | 長崎県 | 県サイトの著作権の条項(下記) | **含まない** |
+| 観光統計・異動人口調査 | 長崎県 | 県サイトの著作権の条項(下記) | **元の表・蓄積データ・地図は含まない**(例外: 長崎市の観光客延べ数の2つの伸び率。下記) |
 
 ### 出典の表記(SSDSE。全国パネルの表・地図を使う場合)
 > 独立行政法人 統計センター SSDSE-A-2018〜SSDSE-A-2026(各版。https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成
@@ -136,29 +136,32 @@ flowchart LR
 
 **私の解釈(法的な助言ではありません)**: 国・気象庁・統計センターのデータは、出典と加工の記載をすれば、公開・商用で利用できると読んでいます。
 
-## 含めていないデータ(長崎県の統計)とその理由
+## 含めていないデータ(長崎県の統計)とその理由、および例外
 - 対象: 長崎県観光統計(市町別の観光客数など)、異動人口調査(年間集計)。取得元URLとSHA256は `config/sources.csv` と `manifest/fetch_log.csv` にあり、取得スクリプトで再取得できます。
 - 理由: 県の公式サイト「このサイトについて」の著作権の項に、次の記載があります(原文)。
   - 「当県サイトに掲載されている文字、写真、イラストなどの個々の情報に関する著作権は、原則として長崎県に帰属します。」
   - 「『私的使用のための複製』や『引用』など著作権法上認められた場合を除き、無断で転載、複製、改変、放送、送信、翻訳、販売、貸与などの利用をすることはできません。」
-- 統計の数値の再掲載が許されるかは、私には判断できません。**県への確認が済むまで、原本・蓄積データ・加工値の地図は `.gitignore` で除外**しています。
+- 統計の数値の再掲載が許されるかは、私には判断できません。**県の統計の元の表・蓄積データ・地図は、県への確認が済むまで公開しません**(`.gitignore` で除外)。
+- **例外**: 出典を明記した、少数の加工値(長崎市の観光客延べ数の2つの伸び率、+55.9% と +43.2%)は、例外として載せています(`docs/作品1_データの落とし穴_出典.md`。元の表の値は載せず、出典の表と行を記載。ページ番号は未確認)。この例外の可否も、県への確認の対象です(未確認)。
 - 含めているもの: 取得スクリプト、URL、SHA256、再算定の注記の**要約**(`ledger/revision_notes.csv`。要約であり原文の転載ではない)、比較不可フラグ、検証結果。
 
 ## 構成
 ```
 config/      取得元URL・期待SHA256・期待行数・規約の引用文
 src/nagplat/ fetch / parse_* / build / validate / mapmaker / ledger / qc_report / notice / privacy_scan / publish_list
+             panel / panel_eval / panel_model / panel_forward(段2〜段4)/ omura(大村市の調査)
 tests/       pytest
-ledger/      台帳: 再算定の注記の要約(数値列を除く)、比較不可フラグ、検証結果、規約の引用、実測、気象の品質記号
+ledger/      台帳: 再算定の注記の要約(数値列を除く)、比較不可フラグ、検証結果、規約の引用、実測、気象の品質記号、
+             パネルの項目・リーク台帳、前向き予測の固定記録(forecast_2026_*)、大村市の調査の固定記録(omura_*)
 manifest/    取得ログ(URL・SHA256・日時)、取得の実行記録、出力のハッシュ
 data/public/ 国・気象庁のデータのみから作った蓄積データ(出典を付けて公開可)
-outputs/public/ 地図とデータの系譜
-docs/        設計文書(01〜05の設計時点の文書、段2、全国パネル、再現手順)
+outputs/public/ 地図とデータの系譜、評価・予測・調査の表(panel_*、forecast_2026_*、omura_*)
+docs/        設計文書(01〜05の設計時点の文書、段2〜段4、全国パネル、大村市の調査、作品1の出典、再現手順)
 publish/     公開用・非公開用の一覧、個人情報スキャン、確認用の資料
 ```
 (`raw/`・`data/restricted/`・`outputs/restricted/`・`ledger/restricted/`・`manifest/restricted/`・`warehouse/`・`work/` はリポジトリに含めません。)
 
-## 段2(全国パネル)の結果の要約 — 基準手法のみ。機械学習モデルは未実装
+## 段2(全国パネル)の結果の要約 — 基準手法のみ(機械学習モデルの結果は、下の「段3」)
 詳細・表は `docs/全国パネル_段2_結果.md`。**盛らずに読むこと**:
 - **主の集計(事前に固定)では、前年値(B0)に勝つ手法はなかった**。直近3年の平均(B1)は −1.3%(全国)。
 - 避難指示区域の**候補**12町村を除く感度分析では、B1が +10.1% で勝つ。これは、事前に固定した評価計画の外の**補助的な分析**で、結果と外れ値を見た後に読んだもの。確認済みの除外は**双葉町のみ**(他は候補。名称は私の知識で、国・県の一覧との照合は未確認)。
