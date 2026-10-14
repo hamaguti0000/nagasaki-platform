@@ -10,7 +10,7 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `LICENSE` | 1 | 1,292 | プロジェクトの説明・設定 |  |
 | `Makefile` | 1 | 955 | プロジェクトの説明・設定 |  |
 | `NOTICE` | 1 | 17,357 | プロジェクトの説明・設定 |  |
-| `README.md` | 1 | 14,411 | プロジェクトの説明・設定 |  |
+| `README.md` | 1 | 14,828 | プロジェクトの説明・設定 |  |
 | `config/expected_counts.csv` | 1 | 811 | 取得元URL・期待ハッシュ・期待行数・規約の引用文 |  |
 | `config/panel_source_notes.csv` | 1 | 871 | 取得元URL・期待ハッシュ・期待行数・規約の引用文 |  |
 | `config/privacy_allow.csv` | 1 | 441 | 取得元URL・期待ハッシュ・期待行数・規約の引用文 |  |
@@ -46,12 +46,14 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `docs/note_段3_貼り付け用.md` | 1 | 13,853 | 設計・説明 |  |
 | `docs/note_段3_貼り付け用_対応表.md` | 1 | 4,519 | 設計・説明 |  |
 | `docs/全国パネル_段2_結果.md` | 1 | 17,538 | 設計・説明 |  |
-| `docs/全国パネル_段3_結果.md` | 1 | 18,007 | 設計・説明 |  |
+| `docs/全国パネル_段3_結果.md` | 1 | 18,582 | 設計・説明 |  |
 | `docs/全国パネル_社会増減_設計.md` | 1 | 21,183 | 設計・説明 |  |
 | `docs/再現手順_自分で理解するために.md` | 1 | 4,951 | 設計・説明 |  |
 | `docs/段2_月次予測_設計.md` | 1 | 17,686 | 設計・説明 |  |
 | `docs/段4_前向き予測_設計.md` | 1 | 8,544 | 設計・説明 |  |
+| `docs/段4_前向き予測_設計_追記1.md` | 1 | 5,597 | 設計・説明 |  |
 | `ledger/README.md` | 1 | 3,388 | 台帳の説明 |  |
+| `ledger/forecast_2026_addenda.csv` | 1 | 404 | 台帳の説明 |  |
 | `ledger/forecast_2026_manifest.csv` | 1 | 1,816 | 前向き予測の固定記録(ファイルのSHA256・コードのコミット) |  |
 | `ledger/panel_code_changes.csv` | 1 | 306 | 台帳の説明 |  |
 | `ledger/panel_items.csv` | 1 | 7,473 | 台帳の説明 |  |
@@ -64,10 +66,11 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `ledger/weather_qc_impact.csv` | 1 | 2,055 | 台帳の説明 |  |
 | `manifest/fetch_runs.csv` | 1 | 1,342 | 取得の実行記録(時刻・User-Agent・件数) |  |
 | `manifest/output_hashes.csv` | 1 | 1,397 | 公開用の出力のパスとSHA256(非公開分は manifest/restricted/ に分離) |  |
-| `outputs/public/forecast_2026_backtest_2020_2025.csv` | 1 | 2,718 | 2026年の前向き予測(SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
-| `outputs/public/forecast_2026_hyperparams.csv` | 1 | 108 | 2026年の前向き予測(SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
-| `outputs/public/forecast_2026_interval_widths.csv` | 1 | 1,518 | 2026年の前向き予測(SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
-| `outputs/public/forecast_2026_predictions.csv` | 1 | 482,368 | 2026年の前向き予測(SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
+| `outputs/public/forecast_2026_README.md` | 1 | 1,890 | 2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
+| `outputs/public/forecast_2026_backtest_2020_2025.csv` | 1 | 2,718 | 2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
+| `outputs/public/forecast_2026_hyperparams.csv` | 1 | 108 | 2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
+| `outputs/public/forecast_2026_interval_widths.csv` | 1 | 1,518 | 2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
+| `outputs/public/forecast_2026_predictions.csv` | 1 | 482,368 | 2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成 |
 | `outputs/public/map_net_migration_rate_2024.lineage.json` | 1 | 3,444 | SSDSE-A と e-Stat 境界データから作った地図 | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成 |
 | `outputs/public/map_net_migration_rate_2024.png` | 1 | 253,349 | SSDSE-A と e-Stat 境界データから作った地図 | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成 |
 | `outputs/public/map_population_2020_weather_2025.lineage.json` | 1 | 10,081 | 国・気象庁のデータのみから作成した地図と系譜 | 出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成 / 出典: 気象庁ホームページ「過去の気象データ」を加工して作成 |
@@ -88,10 +91,10 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `outputs/public/panel_model_overall.csv` | 1 | 1,713 | 全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値) | 独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 |
 | `publish/EXTERNAL_ACCESS_CHECK.md` | 1 | 3,398 | この一覧 |  |
 | `publish/GIT_AUTHOR_PROPOSAL.md` | 1 | 2,924 | この一覧 |  |
-| `publish/PRIVACY_SCAN.md` | 1 | 390 | この一覧 |  |
+| `publish/PRIVACY_SCAN.md` | 1 | 417 | この一覧 |  |
 | `publish/PRIVATE_REPO_CHECKLIST.md` | 1 | 4,392 | この一覧 |  |
-| `publish/PUBLISH_LIST.csv` | 1 | 24,066 | この一覧 |  |
-| `publish/PUBLISH_LIST.md` | 1 | 25,722 | この一覧 |  |
+| `publish/PUBLISH_LIST.csv` | 1 | 25,154 | この一覧 |  |
+| `publish/PUBLISH_LIST.md` | 1 | 26,841 | この一覧 |  |
 | `publish/REVIEW_10_FILES.md` | 1 | 7,137 | この一覧 |  |
 | `requirements.txt` | 1 | 222 | プロジェクトの説明・設定 |  |
 | `src/nagplat/__init__.py` | 1 | 0 | コード |  |
@@ -113,11 +116,11 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `src/nagplat/parse_jma.py` | 1 | 2,005 | コード |  |
 | `src/nagplat/parse_kanko.py` | 1 | 2,175 | コード |  |
 | `src/nagplat/privacy_scan.py` | 1 | 7,856 | コード |  |
-| `src/nagplat/publish_list.py` | 1 | 9,215 | コード |  |
+| `src/nagplat/publish_list.py` | 1 | 9,279 | コード |  |
 | `src/nagplat/qc_report.py` | 1 | 3,651 | コード |  |
 | `src/nagplat/validate.py` | 1 | 21,386 | コード |  |
 | `tests/conftest.py` | 1 | 196 | テスト |  |
-| `tests/test_panel_forward.py` | 1 | 5,668 | テスト |  |
+| `tests/test_panel_forward.py` | 1 | 7,497 | テスト |  |
 | `tests/test_panel_model.py` | 1 | 8,767 | テスト |  |
 | `tests/test_pipeline.py` | 1 | 12,937 | テスト |  |
 
@@ -156,6 +159,6 @@ GitHubに上げる前に、この一覧を確認する(このファイルは `py
 | `outputs/restricted/map_tourists_per_capita_2025.lineage.json` | 1 | 10,893 | 県の統計の加工値を含む地図。県への確認が済むまで公開しない |  |
 | `outputs/restricted/map_tourists_per_capita_2025.png` | 1 | 278,108 | 県の統計の加工値を含む地図。県への確認が済むまで公開しない |  |
 | `raw/` | 262 | 58,149,801 | 取得した原本(県の統計・本文PDFを含む)。取得スクリプトと manifest/fetch_log.csv(URL・SHA256)で再現する |  |
-| `warehouse/` | 1 | 28,848,128 | 作業用のDuckDBファイル(再生成できる。県統計由来を含む) |  |
+| `warehouse/` | 1 | 29,372,416 | 作業用のDuckDBファイル(再生成できる。県統計由来を含む) |  |
 | `work/` | 12 | 161,678,799 | 作業用(PDFのテキスト抽出など。県の本文PDF由来) |  |
 

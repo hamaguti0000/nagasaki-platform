@@ -122,3 +122,35 @@ def test_manifest_matches_files_if_frozen():
             assert sha(ROOT / r["path"]) == r["sha256"], r["path"]
         elif r["kind"] == "file":
             assert r["path"].startswith("raw/"), r["path"]
+
+
+# ---- 設計の追記と注意書き ----
+CAUTION_KEYS = ("前年値に勝てなかった", "参考値", "2027年の答え合わせまで未検証")
+
+
+def test_judging_rules_are_fixed_in_addendum_and_original_files_are_untouched():
+    add = (ROOT / "docs" / "段4_前向き予測_設計_追記1.md").read_text(encoding="utf-8")
+    for k in ("何を", "どの指標で", "何と比べて", "勝ち", "負け", "判定不能", "多重性", "参考値であり、勝敗の判定には使わない"):
+        assert k in add, k
+    rows = list(csv.DictReader(open(ROOT / "ledger" / "forecast_2026_addenda.csv", encoding="utf-8")))
+    assert [r["id"] for r in rows] == ["A1"] and sha(ROOT / rows[0]["file"]) == rows[0]["sha256"]
+    man = {r["path"]: r["sha256"] for r in csv.DictReader(open(ROOT / "ledger" / "forecast_2026_manifest.csv", encoding="utf-8"))}
+    assert sha(ROOT / "docs" / "段4_前向き予測_設計.md") == man["docs/段4_前向き予測_設計.md"]   # 元の設計は動かしていない
+
+
+def test_caution_is_in_readme_sidecar_and_docs():
+    for rel in ("README.md", "outputs/public/forecast_2026_README.md", "docs/全国パネル_段3_結果.md"):
+        text = (ROOT / rel).read_text(encoding="utf-8")
+        for k in CAUTION_KEYS:
+            assert k in text, (rel, k)
+
+
+def test_original_tag_is_not_moved():
+    import subprocess
+    if not (ROOT / ".git").exists():
+        pytest.skip("git なし")
+    rows = list(csv.DictReader(open(ROOT / "ledger" / "forecast_2026_addenda.csv", encoding="utf-8")))
+    got = subprocess.run(["git", "-C", str(ROOT), "rev-parse", rows[0]["base_tag"]], capture_output=True, text=True)
+    if got.returncode != 0:
+        pytest.skip("タグがない(クローンにタグが含まれていない)")
+    assert got.stdout.strip() == rows[0]["base_tag_object"]
