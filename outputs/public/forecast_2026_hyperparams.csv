@@ -1,0 +1,3 @@
+scope,alpha,gbdt_depth,gbdt_trees,n_train,n_folds
+main,100.0,4,300,13900,2
+sensitivity,1000.0,4,300,13824,2

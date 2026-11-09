@@ -1,0 +1,9 @@
+scope,method,n,mae,rmse,wmae,sign_acc,spearman_mean,improvement_vs_B0,improvement_ci95_low,improvement_ci95_high,pref_rank_pct_B0_mae
+main,B0_previous_year,105,2.7576,3.7901,1.768,0.8762,0.6494,0.0,,,0.426
+main,B1_mean_last3,105,2.4159,3.2616,1.5638,0.9143,0.713,0.1239,0.006,0.2112,
+main,B2_size_class_mean,105,4.7194,6.0254,5.2144,0.7714,0.079,-0.7114,-1.2076,-0.3418,
+main,B3_national_median,105,3.9374,4.839,3.4473,0.8571,,-0.4278,-0.9168,-0.0662,
+sensitivity,B0_previous_year,105,2.7576,3.7901,1.768,0.8762,0.6494,0.0,,,0.426
+sensitivity,B1_mean_last3,105,2.4159,3.2616,1.5638,0.9143,0.713,0.1239,0.006,0.2112,
+sensitivity,B2_size_class_mean,105,4.5077,5.2823,5.2082,0.7714,0.079,-0.6346,-1.159,-0.249,
+sensitivity,B3_national_median,105,3.9459,4.8437,3.4617,0.8571,,-0.4309,-0.9217,-0.0691,

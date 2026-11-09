@@ -1,0 +1,11 @@
+# 実行に必要なライブラリ(動作を確認した版。2026-10-13)
+duckdb==1.5.6
+openpyxl==3.1.5
+xlrd==2.0.2
+pyshp==3.1.6
+shapely==2.2.0
+matplotlib==3.11.2
+numpy==2.5.4
+requests==2.32.5
+pypdf==6.20.1
+pytest==9.1.1

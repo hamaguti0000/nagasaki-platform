@@ -1,0 +1,114 @@
+NOTICE
+======
+
+This project's source code is licensed under the MIT License (see LICENSE).
+The data handled by this project come from the providers below. Attribution and conditions of use follow.
+The quoted conditions were checked verbatim against the pages fetched on the dates recorded in
+ledger/terms_quotes_verified.csv. The interpretation in README.md is not legal advice.
+
+1. 境界データ・国勢調査の人口(統計GIS)
+-----------------------
+提供元: 総務省統計局 政府統計の総合窓口(e-Stat)統計地理情報システム
+URL: https://www.e-stat.go.jp/gis
+利用しているデータ: 令和2年国勢調査 小地域の境界データ(長崎県、世界測地系・緯度経度)。市町に集約し、描画用に簡略化したものと、小地域の人口の市町別合計を data/public に含む。
+本リポジトリへの収録: 加工物のみ(原本のZIPは含まない)
+出典表記: 出典: 政府統計の総合窓口(e-Stat)(https://www.e-stat.go.jp/) 統計GIS 境界データ(令和2年国勢調査)を加工して作成
+利用条件(原文の引用):
+  - 「コンテンツを利用する際は出典を記載してください。」 [T_ESTAT / 出典 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。」 [T_ESTAT / 編集・加工 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「編集・加工した情報を、あたかも国（又は府省等）が作成したかのような態様で公表・利用してはいけません。」 [T_ESTAT / 国が作成したような公表の禁止 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「本利用ルールが適用されるコンテンツはCC BYに従うことでも利用することができます。」 [T_ESTAT / CC BYとの関係 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「外部データベース等とのＡＰＩ（Application Programming Interface）連携等により取得しているコンテンツについては、その提供元の利用条件に従ってください。」 [T_ESTAT / API連携 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「コンテンツの中には、第三者（国以外の者をいいます。以下同じ。）が著作権その他の権利を有している場合があります。」 [T_ESTAT / 第三者の権利 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「コンテンツは、予告なく変更、移転、削除等が行われることがあります。」 [T_ESTAT / 変更・削除 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「統計地理情報システムの利用について」 [T_ESTAT / 別の利用ルール(統計地理情報システム) / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「の利用条件等は、「政府統計の総合窓口（e-Stat）利用規約」に準じるものとします。」 [T_ESTAT_GIS / コンテンツの利用条件(第6条) / https://www.e-stat.go.jp/gis-terms / 取得 2026-10-13T04:07:54Z]
+  - 「統計センターは、本機能の負荷状況に応じてアクセス制限をかけることがあります。」 [T_ESTAT_GIS / アクセス制限(第5条) / https://www.e-stat.go.jp/gis-terms / 取得 2026-10-13T04:07:54Z]
+  - 「国及び統計センターは、本機能から提供するコンテンツの完全性・正確性・有用性・安全性等について利用者に対し一切の保証をしません。」 [T_ESTAT_GIS / 免責(第9条) / https://www.e-stat.go.jp/gis-terms / 取得 2026-10-13T04:07:54Z]
+  - 「複製、公衆送信、翻訳・変形等の翻案等、自由に利用できます。商用利用も可能です。」 [T_ESTAT / 商用利用 / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+  - 「数値データ、簡単な表・グラフ等は著作権の対象ではありません」 [T_ESTAT / 数値データ / https://www.e-stat.go.jp/terms-of-use / 取得 2026-10-13T04:07:52Z]
+
+2. 気象データ(気象庁)
+-------------
+提供元: 気象庁
+URL: https://www.data.jma.go.jp/stats/etrn/
+利用しているデータ: 過去の気象データ(官署6地点、月ごとの値、2015〜2025年)と、アメダス地点表の位置情報。月別の表と年の集計を data/public に含む。
+本リポジトリへの収録: 加工物のみ(取得したHTMLの原本は含まない)
+出典表記: 出典: 気象庁ホームページ「過去の気象データ」(https://www.data.jma.go.jp/stats/etrn/)を加工して作成
+利用条件(原文の引用):
+  - 「コンテンツを利用する際は出典を記載してください。」 [T_JMA / 出典 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。」 [T_JMA / 編集・加工 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「あたかも国（又は府省等）が作成したかのような態様で公表・利用してはいけません。」 [T_JMA / 国が作成したような公表の禁止 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「権利表記の記載がない限り「公共データ利用規約（第1.0版）」に準拠した利用条件の下で、利用することができます。」 [T_JMA / 利用の根拠 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「一部のコンテンツには、個別法令により利用に制約がある場合があります。」 [T_JMA / 個別法令の制約 / https://www.jma.go.jp/jma/kishou/info/coment.html / 取得 2026-10-13T04:07:54Z]
+  - 「商用利用も可能です。」 [T_PDL1 / 商用利用 / https://www.digital.go.jp/resources/open_data/public_data_license_v1.0 / 取得 2026-10-13T04:13:52Z]
+  - 「本コンテンツを利用する際は出典を記載してください。」 [T_PDL1 / 出典 / https://www.digital.go.jp/resources/open_data/public_data_license_v1.0 / 取得 2026-10-13T04:13:52Z]
+  - 「本コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったこと及びその主体を記載してください。」 [T_PDL1 / 編集・加工 / https://www.digital.go.jp/resources/open_data/public_data_license_v1.0 / 取得 2026-10-13T04:13:52Z]
+  - 「統計を行う対象資料が許容範囲で欠けている（準正常値）」 [T_JMA_HELP / 準正常値の意味 / https://www.data.jma.go.jp/risk/obsdl/top/help4.html / 取得 2026-10-13T04:45:38Z]
+  - 「必要な資料数は、要素または現象、統計方法により若干異なるが全体数の80％が基準」 [T_JMA_HELP / 準正常値の基準 / https://www.data.jma.go.jp/risk/obsdl/top/help4.html / 取得 2026-10-13T04:45:38Z]
+  - 「統計を行う対象資料が許容範囲を超えて欠けている（資料不足値）」 [T_JMA_HELP / 資料不足値の意味 / https://www.data.jma.go.jp/risk/obsdl/top/help4.html / 取得 2026-10-13T04:45:38Z]
+  - 「統計値がない（欠測）」 [T_JMA_HELP / 欠測 / https://www.data.jma.go.jp/risk/obsdl/top/help4.html / 取得 2026-10-13T04:45:38Z]
+  - 「「資料不足値」を不用意に利用してしまわないよう、そのようなデータを表示（格納）させない設定も可能です。」 [T_JMA_HELP / 資料不足値の扱い(設定) / https://www.data.jma.go.jp/risk/obsdl/top/help1.html / 取得 2026-10-13T04:45:23Z]
+
+3. バス情報(長崎県営バス GTFS)
+--------------------
+提供元: 長崎県営バス(長崎県交通局)
+URL: https://www.keneibus.jp/local/OpenData
+利用しているデータ: 2026年10月1日版のGTFSの件数(停留所・便・時刻)の実測にのみ使用(docs/段2_月次予測_設計.md)。データそのものは含まない。
+本リポジトリへの収録: 含まない(件数の実測値のみを文書に記載)
+出典表記: 出典: 長崎県営バス「公開データ(GTFS準拠)」(https://www.keneibus.jp/local/OpenData)、CC BY 4.0
+利用条件(原文の引用):
+  - 「クリエイティブ・コモンズ表示４．０国際ライセンスの下に提供されています」 [T_KENEIBUS / ライセンス / https://www.keneibus.jp/local/OpenData / 取得 2026-10-13T04:45:24Z]
+
+4. 全国の市区町村パネル(SSDSE-市区町村、統計センター)
+--------------------------------
+提供元: 独立行政法人 統計センター(元データ: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」)
+URL: https://www.nstac.go.jp/use/literacy/ssdse/
+利用しているデータ: SSDSE-市区町村(SSDSE-A)の2018〜2026年版から組み立てた、全国1,741市区町村×2016〜2024年の指標(転入者数・転出者数〔日本人移動者〕、国勢調査の人口、学校数など)と、その加工物(基準手法の評価の表、地図)。data/public と outputs/public に含む。
+本リポジトリへの収録: 加工物のみ(取得したCSVの原本は含まない)。SSDSE-A の項目のうち 31/125 項目(25%)の値を、版の値のまま取り込んでいる。第三者が権利を有する項目の有無は未確認
+出典表記: 独立行政法人 統計センター SSDSE-A-2018〜SSDSE-A-2026(各版。https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+利用条件(原文の引用):
+  - 「本コンテンツを利用する際は、出典を記載してください。」 [T_SSDSE_SITE / 出典の記載(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「統計センター SSDSE-A-2024（https://www.nstac.go.jp/use/literacy/SSDSE/）を加工して作成」 [T_SSDSE_SITE / 加工した場合の記載例(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「コンテンツの利用やプライバシーポリシー等は、独立行政法人統計センターのサイトに準じます」 [T_SSDSE_SITE / 他の規定への準拠(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「商用利用も可能です。」 [T_NSTAC / 商用利用(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「コンテンツを利用する際は出典を記載してください。」 [T_NSTAC / 出典(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「コンテンツを編集・加工等して利用する場合は、上記出典とは別に、編集・加工等を行ったことを記載してください。」 [T_NSTAC / 編集・加工(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「コンテンツの中には、第三者（独立行政法人統計センター以外の者をいいます。以下同じ。）が著作権そのほかの利用を有している場合があります。」 [T_NSTAC / 第三者の権利(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「本利用ルールが適用されるコンテンツは、CC BYに従うことでも利用することができます。」 [T_NSTAC / CC BY互換(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「複製、公衆送信、翻訳・変形等の翻案等、自由に利用できます。商用利用も可能です。」 [T_NSTAC / 複製・公衆送信・翻案の自由(統計センター) / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「また編集・加工した情報を、あたかも独立行政法人統計センターが作成したかのような態様で公表・利用することは禁止します。」 [T_NSTAC / 統計センターが作成したかのような公表の禁止 / https://www.nstac.go.jp/info/site-policy/ / 取得 2026-10-13T06:28:07Z]
+  - 「出典：独立行政法人 統計センター SSDSE-市区町村（https://www.nstac.go.jp/use/literacy/SSDSE/）」 [T_SSDSE_SITE / 出典の記載例(SSDSE-市区町村) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「（出典）総務省統計局「統計でみる都道府県・市区町村のすがた（社会・人口統計体系）」」 [T_SSDSE_SITE / 元の出典の記載(SSDSE-A) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「授業や講義でSSDSEを配布する際には、SSDSEの解説も一緒に配布していただき、データの出典や単位などについても意識してお使いいただけますよう、お願いいたします。」 [T_SSDSE_SITE / 配布する際のお願い(SSDSE) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+  - 「リンク用バナーとしての画像の利用は自由ですが、画像データの改変、再配布は禁止します。」 [T_SSDSE_SITE / バナー画像の再配布の禁止(データの条件ではない) / https://www.nstac.go.jp/SSDSE/ / 取得 2026-10-13T05:06:41Z]
+
+5. 長崎県の統計(観光統計・異動人口調査)— 元の表・蓄積データ・地図は含めていない(少数の加工値のみ例外)
+-------------------------------------------------------
+提供元: 長崎県
+URL: https://www.pref.nagasaki.jp/pages/site_info.html
+利用しているデータ: 長崎県観光統計(集約表・本文)、異動人口調査(年間集計)。取得スクリプト、取得元URL、SHA256、再算定の注記の要約、および、長崎市の観光客延べ数の2つの伸び率(docs/作品1_データの落とし穴_出典.md。元の表の値は含まない)を含む。
+本リポジトリへの収録: 元の表・蓄積データ・地図は含まない。県サイトの著作権の条項(下記)により、県への確認が済むまで公開しない。出典を明記した少数の加工値(長崎市の観光客延べ数の2つの伸び率)は、例外として載せている(この例外の可否も、県への確認の対象。未確認)
+出典表記: (データを含めないため該当なし。要約の出典: 長崎県「長崎県観光統計」(各年版))
+利用条件(原文の引用):
+  - 「当県サイトに掲載されている文字、写真、イラストなどの個々の情報に関する著作権は、原則として長崎県に帰属します。」 [T_PREF_SITE / 著作権の帰属 / https://www.pref.nagasaki.jp/pages/site_info.html / 取得 2026-10-13T04:07:54Z]
+  - 「「私的使用のための複製」や「引用」など著作権法上認められた場合を除き、無断で転載、複製、改変、放送、送信、翻訳、販売、貸与などの利用をすることはできません。」 [T_PREF_SITE / 転載・改変の制限 / https://www.pref.nagasaki.jp/pages/site_info.html / 取得 2026-10-13T04:07:54Z]
+  - 「当県サイトの情報やURLは予告なく変更又は中止されることがあります。」 [T_PREF_SITE / 免責(URL変更) / https://www.pref.nagasaki.jp/pages/site_info.html / 取得 2026-10-13T04:07:54Z]
+
+6. 住民基本台帳人口移動報告(総務省統計局)— 2025年結果の市区町村別(段4の前向き予測の入力)
+---------------------------------------------------
+提供元: 総務省統計局 政府統計の総合窓口(e-Stat)「住民基本台帳人口移動報告 年報」
+URL: https://www.stat.go.jp/data/idou/index.html
+利用しているデータ: 2025年結果の表11-1・11-2・11-3(他市区町村からの転入者数・転出者数・転入超過数、全国・都道府県・市区町村、日本人移動者)。2026年の予測の入力(2025年の転入超過率)に使い、加工値を outputs/public に含む。
+本リポジトリへの収録: 加工物のみ(取得したExcelの原本は含まない)
+出典表記: 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成
+利用条件(原文の引用):
+  - 「商用利用も可能です。」 [T_STAT / 商用利用(統計局) / https://www.stat.go.jp/info/riyou.html / 取得 2026-10-13T05:08:06Z]
+  - 「数値データ、簡単な表・グラフ等は著作権の対象ではありません」 [T_STAT / 数値データ(統計局) / https://www.stat.go.jp/info/riyou.html / 取得 2026-10-13T05:08:06Z]
+  - 「コンテンツを利用する際は出典を記載してください。」 [T_STAT / 出典(統計局) / https://www.stat.go.jp/info/riyou.html / 取得 2026-10-13T05:08:06Z]
+  - 「「公共データ利用規約（第1.0版）」（PDL1.0）」 [T_STAT / 準拠する規約(統計局) / https://www.stat.go.jp/info/riyou.html / 取得 2026-10-13T05:08:06Z]
+  - 「統計データを引用・転載する場合には、出典：「住民基本台帳人口移動報告」（総務省統計局）の表記をお願いします。」 [T_IDOU / 出典の表記(住民基本台帳人口移動報告) / https://www.stat.go.jp/data/idou/index.html / 取得 2026-10-13T05:06:40Z]
+
+Not included in this repository / 本リポジトリに含まれないもの
+-------------------------------------------------------------
+長崎県の統計の原本・蓄積データ・加工値の地図(data/restricted, outputs/restricted)は、.gitignore で除外している。

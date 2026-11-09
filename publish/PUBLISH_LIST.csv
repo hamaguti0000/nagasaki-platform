@@ -1,0 +1,158 @@
+path,klass,n_files,bytes,reason,credit
+.gitignore,public,1,656,プロジェクトの説明・設定,
+.pylibs/,private,5425,417891343,ローカルのライブラリ置き場,
+LICENSE,public,1,1292,プロジェクトの説明・設定,
+Makefile,public,1,955,プロジェクトの説明・設定,
+NOTICE,public,1,17826,プロジェクトの説明・設定,
+README.md,public,1,22532,プロジェクトの説明・設定,
+config/expected_counts.csv,public,1,811,取得元URL・期待ハッシュ・期待行数・規約の引用文,
+config/panel_source_notes.csv,public,1,871,取得元URL・期待ハッシュ・期待行数・規約の引用文,
+config/privacy_allow.csv,public,1,441,取得元URL・期待ハッシュ・期待行数・規約の引用文,
+config/sources.csv,public,1,13915,取得元URL・期待ハッシュ・期待行数・規約の引用文,
+config/terms_quotes.csv,public,1,8825,取得元URL・期待ハッシュ・期待行数・規約の引用文,
+data/public/bronze/bronze_boundary_small_area.csv,public,1,309949,e-Stat 境界データの属性,出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成
+data/public/bronze/bronze_boundary_small_area.parquet,public,1,84458,e-Stat 境界データの属性,出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成
+data/public/bronze/bronze_jma_monthly.csv,public,1,559676,気象庁のデータの整形,出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+data/public/bronze/bronze_jma_monthly.parquet,public,1,48286,気象庁のデータの整形,出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+data/public/gold/gold_municipality_pop2020.csv,public,1,794,e-Stat 境界データの属性(国勢調査人口)の集計,出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成
+data/public/gold/gold_municipality_pop2020.parquet,public,1,1149,e-Stat 境界データの属性(国勢調査人口)の集計,出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成
+data/public/gold/gold_panel_forecast_table.csv,public,1,1772462,SSDSE-A(国のデータ)から組み立てた全国パネル(値は版の値のまま+差・率・フラグ),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+data/public/gold/gold_panel_forecast_table.parquet,public,1,411277,SSDSE-A(国のデータ)から組み立てた全国パネル(値は版の値のまま+差・率・フラグ),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+data/public/gold/gold_panel_municipality_year.csv,public,1,5917783,SSDSE-A(国のデータ)から組み立てた全国パネル(値は版の値のまま+差・率・フラグ),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+data/public/gold/gold_panel_municipality_year.parquet,public,1,1059307,SSDSE-A(国のデータ)から組み立てた全国パネル(値は版の値のまま+差・率・フラグ),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+data/public/gold/gold_station_year.csv,public,1,4318,気象庁のデータの集計,出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+data/public/gold/gold_station_year.parquet,public,1,3018,気象庁のデータの集計,出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+data/public/gold/municipality_boundary.geojson,public,1,2718978,e-Stat 境界データの加工物(市町に集約・簡略化),出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成
+data/public/silver/silver_area.csv,public,1,787,市町の団体コード・名称(境界データのコードと照合済み),
+data/public/silver/silver_area.parquet,public,1,992,市町の団体コード・名称(境界データのコードと照合済み),
+data/public/silver/silver_panel_area.csv,public,1,80125,SSDSE-A の地域・コードの対応(版の値のまま+フラグ),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+data/public/silver/silver_panel_area.parquet,public,1,22559,SSDSE-A の地域・コードの対応(版の値のまま+フラグ),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+data/public/silver/silver_ssdse_area_map.csv,public,1,111555,SSDSE-A の地域コードの対応,独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+data/public/silver/silver_ssdse_area_map.parquet,public,1,37186,SSDSE-A の地域コードの対応,独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+data/public/silver/silver_station.csv,public,1,481,気象庁アメダス地点表から作成した観測点の位置,出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+data/public/silver/silver_station.parquet,public,1,1070,気象庁アメダス地点表から作成した観測点の位置,出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+data/public/silver/silver_weather_month.csv,public,1,60696,気象庁のデータの整形,出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+data/public/silver/silver_weather_month.parquet,public,1,16573,気象庁のデータの整形,出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+data/restricted/bronze/bronze_jinko_nenkan.csv,private,1,65264,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/bronze/bronze_jinko_nenkan.parquet,private,1,18606,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/bronze/bronze_kanko_aggregate.csv,private,1,82465,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/bronze/bronze_kanko_aggregate.parquet,private,1,15636,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/gold/gold_municipality_year.csv,private,1,19230,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/gold/gold_municipality_year.parquet,private,1,7532,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/silver/silver_population_year.csv,private,1,48879,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/silver/silver_population_year.parquet,private,1,14143,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/silver/silver_tourism_year.csv,private,1,60388,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+data/restricted/silver/silver_tourism_year.parquet,private,1,12495,県の統計由来の蓄積データ。県への確認が済むまで公開しない,
+docs/01_データソース台帳.md,review,1,19644,設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない),
+docs/02_アーキテクチャ案.md,review,1,7985,設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない),
+docs/03_MVP提案.md,review,1,6759,設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない),
+docs/04_予測・機械学習の設計.md,review,1,6559,設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない),
+docs/05_リスクと未確認.md,review,1,8067,設計時点の文書。県サイトの条項の短い引用・県統計の件数を含む(県の統計値は含まない),
+docs/note_段3_下書き.md,public,1,8938,設計・説明,
+docs/note_段3_数字の出典.md,public,1,7143,設計・説明,
+docs/note_段3_貼り付け本文.md,public,1,11520,設計・説明,
+docs/note_段3_貼り付け本文_プレーン.txt,public,1,11413,設計・説明,
+docs/note_段3_貼り付け用.md,public,1,13853,設計・説明,
+docs/note_段3_貼り付け用_対応表.md,public,1,4519,設計・説明,
+docs/作品1_データの落とし穴_出典.md,review,1,4238,県の統計由来の少数の加工値(長崎市の観光客延べ数の2つの伸び率)と、出典の位置のみ。元の表の値は含まない。例外として載せる(この例外の可否も、県への確認の対象。未確認),出典: 長崎県「長崎県観光統計」(各年版)を加工して作成
+docs/全国パネル_段2_結果.md,public,1,17538,設計・説明,
+docs/全国パネル_段3_結果.md,public,1,18582,設計・説明,
+docs/全国パネル_社会増減_設計.md,public,1,21183,設計・説明,
+docs/再現手順_自分で理解するために.md,public,1,4951,設計・説明,
+docs/大村市_なぜ_結果.md,public,1,12296,設計・説明,
+docs/大村市_なぜ_設計.md,public,1,12494,設計・説明,
+docs/段2_月次予測_設計.md,public,1,17686,設計・説明,
+docs/段4_前向き予測_設計.md,public,1,8544,設計・説明,
+docs/段4_前向き予測_設計_追記1.md,public,1,5597,設計・説明,
+ledger/README.md,public,1,3388,台帳の説明,
+ledger/comparability_flags.csv,review,1,4208,県の注記から導いた比較不可フラグ(派生物),出典: 長崎県「長崎県観光統計」(各年版)の注記から作成
+ledger/forecast_2026_addenda.csv,public,1,404,台帳の説明,
+ledger/forecast_2026_manifest.csv,public,1,1816,前向き予測の固定記録(ファイルのSHA256・コードのコミット),
+ledger/omura_design_manifest.csv,public,1,744,大村市の調査の固定記録(設計・イベントのSHA256、一次資料の確認状況),
+ledger/omura_events.csv,public,1,2425,大村市の調査の固定記録(設計・イベントのSHA256、一次資料の確認状況),
+ledger/panel_code_changes.csv,public,1,306,台帳の説明,
+ledger/panel_items.csv,public,1,7473,台帳の説明,
+ledger/panel_leakage_register.csv,public,1,5975,予測に使う特徴量のリーク(時点)の一覧と対策(国のデータのみ),
+ledger/panel_model_features.csv,public,1,2448,予測モデルの特徴量の一覧(国のデータのみ),
+ledger/restricted/revision_notes_with_changes.csv,private,1,13826,県統計から導いた数値列を含む台帳の完全版(検証V51用),
+ledger/revision_notes.csv,public,1,13315,県の本文の再算定の注記の要約(数値列を除いた公開版。原文の転載ではない),出典: 長崎県「長崎県観光統計」(各年版)を要約
+ledger/source_measurements.csv,public,1,862,取得物の件数・容量・行数,
+ledger/terms_quotes_verified.csv,public,1,14987,利用規約の引用(規約ページとの逐語照合済み),
+ledger/validation_results.csv,review,1,5403,県統計を含む検証結果(件数と合否。値は失敗時の例のみ),
+ledger/weather_qc_flags.csv,public,1,13953,台帳の説明,
+ledger/weather_qc_impact.csv,public,1,2055,台帳の説明,
+local/REMOTE_COMMANDS.md,private,1,3158,個人の作業メモ(リモートの設定コマンドなど。ユーザー名を含む),
+local/説明メモ.md,private,1,9331,個人の作業メモ(リモートの設定コマンドなど。ユーザー名を含む),
+manifest/fetch_log.csv,review,1,70715,取得ログ(URL・SHA256・日時)。県のURLとハッシュを含む(設計で置くと決めた範囲),
+manifest/fetch_runs.csv,public,1,1342,取得の実行記録(時刻・User-Agent・件数),
+manifest/output_hashes.csv,public,1,1397,公開用の出力のパスとSHA256(非公開分は manifest/restricted/ に分離),
+manifest/restricted/output_hashes_restricted.csv,private,1,615,非公開ファイルのパスとハッシュ,
+outputs/public/forecast_2026_README.md,public,1,1890,2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成
+outputs/public/forecast_2026_backtest_2020_2025.csv,public,1,2718,2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成
+outputs/public/forecast_2026_hyperparams.csv,public,1,108,2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成
+outputs/public/forecast_2026_interval_widths.csv,public,1,1518,2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成
+outputs/public/forecast_2026_predictions.csv,public,1,482368,2026年の前向き予測(参考値。精度は2027年の答え合わせまで未検証。SSDSE-A・住民基本台帳人口移動報告由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 総務省統計局「住民基本台帳人口移動報告」(2025年結果)を加工して作成
+outputs/public/map_net_migration_rate_2024.lineage.json,public,1,3528,SSDSE-A と e-Stat 境界データから作った地図,独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成
+outputs/public/map_net_migration_rate_2024.png,public,1,253349,SSDSE-A と e-Stat 境界データから作った地図,独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」 / 出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成
+outputs/public/map_population_2020_weather_2025.lineage.json,public,1,10165,国・気象庁のデータのみから作成した地図と系譜,出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成 / 出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+outputs/public/map_population_2020_weather_2025.png,public,1,270190,国・気象庁のデータのみから作成した地図と系譜,出典: 政府統計の総合窓口(e-Stat)統計GIS 境界データ(令和2年国勢調査)を加工して作成 / 出典: 気象庁ホームページ「過去の気象データ」を加工して作成
+outputs/public/omura_comparison_groups.csv,public,1,30647,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/omura_indicators.csv,public,1,1972,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/omura_sensitivity.csv,public,1,2528,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/omura_yearly.csv,public,1,1382,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/omura_yearly.png,public,1,141523,大村市の転入超過の調査(SSDSE-A由来の加工値。1市の記述で、原因を示すものではない),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_baseline_by_prefecture.csv,public,1,4147,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_baseline_by_year.csv,public,1,3189,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_baseline_nagasaki.csv,public,1,797,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_baseline_nagasaki_by_municipality.csv,public,1,5005,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_baseline_nagasaki_by_year.csv,public,1,2743,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_baseline_overall.csv,public,1,1252,全国パネルでの基準手法の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_model_by_prefecture.csv,public,1,4125,全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_model_by_year.csv,public,1,3305,全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_model_hyperparams.csv,public,1,25125,全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_model_importance.csv,public,1,13463,全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_model_nagasaki.csv,public,1,931,全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_model_nagasaki_by_municipality.csv,public,1,4559,全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_model_nagasaki_by_year.csv,public,1,2589,全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/public/panel_model_overall.csv,public,1,1713,全国パネルでの予測モデル(Ridge・勾配ブースティング)の評価(SSDSE-A由来の加工値),独立行政法人 統計センター SSDSE-A-2018〜2026(https://www.nstac.go.jp/use/literacy/SSDSE/)を加工して作成。元の出典: 総務省統計局「統計でみる都道府県・市区町村のすがた(社会・人口統計体系)」
+outputs/restricted/map_tourists_per_capita_2025.lineage.json,private,1,10977,県の統計の加工値を含む地図。県への確認が済むまで公開しない,
+outputs/restricted/map_tourists_per_capita_2025.png,private,1,278108,県の統計の加工値を含む地図。県への確認が済むまで公開しない,
+publish/EXTERNAL_ACCESS_CHECK.md,public,1,3398,この一覧,
+publish/GIT_AUTHOR_PROPOSAL.md,public,1,2924,この一覧,
+publish/PRIVACY_SCAN.md,public,1,417,この一覧,
+publish/PRIVATE_REPO_CHECKLIST.md,public,1,4582,この一覧,
+publish/PUBLISH_LIST.csv,public,1,28003,この一覧,
+publish/PUBLISH_LIST.md,public,1,29785,この一覧,
+publish/REVIEW_10_FILES.md,public,1,7137,この一覧,
+raw/,private,262,58149801,取得した原本(県の統計・本文PDFを含む)。取得スクリプトと manifest/fetch_log.csv(URL・SHA256)で再現する,
+requirements.txt,public,1,222,プロジェクトの説明・設定,
+src/nagplat/__init__.py,public,1,0,コード,
+src/nagplat/build.py,public,1,14937,コード,
+src/nagplat/cli.py,public,1,2435,コード,
+src/nagplat/common.py,public,1,2698,コード,
+src/nagplat/fetch.py,public,1,6978,コード,
+src/nagplat/ledger.py,public,1,4842,コード,
+src/nagplat/mapmaker.py,public,1,13376,コード,
+src/nagplat/notice.py,public,1,6915,コード,
+src/nagplat/omura.py,public,1,18834,コード,
+src/nagplat/panel.py,public,1,14314,コード,
+src/nagplat/panel_eval.py,public,1,6967,コード,
+src/nagplat/panel_forward.py,public,1,12552,コード,
+src/nagplat/panel_model.py,public,1,29186,コード,
+src/nagplat/panel_model_report.py,public,1,7952,コード,
+src/nagplat/panel_report.py,public,1,5007,コード,
+src/nagplat/parse_boundary.py,public,1,2309,コード,
+src/nagplat/parse_jinko.py,public,1,3322,コード,
+src/nagplat/parse_jma.py,public,1,2005,コード,
+src/nagplat/parse_kanko.py,public,1,2175,コード,
+src/nagplat/privacy_scan.py,public,1,7856,コード,
+src/nagplat/publish_list.py,public,1,9948,コード,
+src/nagplat/qc_report.py,public,1,3651,コード,
+src/nagplat/validate.py,public,1,21386,コード,
+tests/conftest.py,public,1,196,テスト,
+tests/test_omura.py,public,1,2741,テスト,
+tests/test_panel_forward.py,public,1,7497,テスト,
+tests/test_panel_model.py,public,1,8767,テスト,
+tests/test_pipeline.py,public,1,12937,テスト,
+warehouse/,private,1,28848128,作業用のDuckDBファイル(再生成できる。県統計由来を含む),
+work/,private,12,161678799,作業用(PDFのテキスト抽出など。県の本文PDF由来),

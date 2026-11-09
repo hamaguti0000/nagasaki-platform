@@ -1,0 +1,2 @@
+id,file,sha256,written_at_utc,base_tag,base_tag_object,reason
+A1,docs/段4_前向き予測_設計_追記1.md,c8580b070e5fe6373f0096c95124a7bbb6729c7a3cf9fac558342cd040e940a8,2026-10-14T01:58Z,forecast-2026-v1,e8afcaab5411ded05eef7b021136f2588c438f7b,勝敗の判定(何を・どの指標で・何と比べて・何をもって勝ち負けか)を固定。2026年の実績は未公表で、見ていない

@@ -1,0 +1,15 @@
+kind,path,sha256,note
+meta,code_commit,535881e0aab5871c9fb8c81384192b361c4dc7ad,予測を作ったコードのコミット(このコミットに、予測の表・設計・コードが含まれる)
+meta,frozen_at_utc,2026-10-14T01:31:57Z,固定の時刻(自己申告。第三者の時刻の証拠ではない)
+meta,design_ref,docs/段4_前向き予測_設計.md,勝敗と報告の方針は、この文書で固定
+file,outputs/public/forecast_2026_predictions.csv,183cb49f86ba81130e7e4ed46c8a01fda568fdc86c1b60989e802089a23ef82d,
+file,outputs/public/forecast_2026_backtest_2020_2025.csv,fc8dea391ee7b23826808da3ad05a383d41275b8d568d6802c075b3c1d2bb818,
+file,outputs/public/forecast_2026_interval_widths.csv,cc62c5eccdb5dafb8ae74be492ed3bb0ae83218818c6940745ba2bc138b53b8d,
+file,outputs/public/forecast_2026_hyperparams.csv,6fd5c3365fce37bf833e96bb78a34678a6cc49b71e14e170454d80d25c6f22be,
+file,raw/public/idou/idou2025_t11-1_transfers_in.xlsx,a60963ef1f066deed36e9da8df128a1b5e9b26656701f9da21a1c7e853824cf2,非公開(raw/)の入力。取得元は config/sources.csv
+file,raw/public/idou/idou2025_t11-2_transfers_out.xlsx,53944ffa6d3fe4f44fe2c9389ec64bf0a4a376a2e9cd3ac282e36aedaeeea2a3,非公開(raw/)の入力。取得元は config/sources.csv
+file,raw/public/idou/idou2025_t11-3_net.xlsx,eeeb88be746badda04d350a8e83a65c072e8c782a0ec208373696d123e5ca1b8,非公開(raw/)の入力。取得元は config/sources.csv
+file,src/nagplat/panel_model.py,dd4ac04923286bcbb9faaa70ef9427b623d0450eab5674ee904ed5d8268ccb7d,
+file,src/nagplat/panel_forward.py,dacee54a4946b5c5b4f499ef0a19a8ede0e219fa00773a0185e9cce31948d087,
+file,src/nagplat/panel_eval.py,678c2dfeb10c5ffb577156cafec348d73c8d401d43d80a1e1bbe77a1d5e7699f,
+file,docs/段4_前向き予測_設計.md,8508e35cedd915dd4baceab8f78cb223c53c83278790a550651e60d4ddc5c25f,
